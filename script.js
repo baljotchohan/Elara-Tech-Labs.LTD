@@ -338,6 +338,20 @@ const additionalStyles = `
     }
 `;
 
+// Scroll to contact function
+function scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        const targetPosition = contactSection.offsetTop - headerHeight;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
 // Inject additional styles
 const styleSheet = document.createElement('style');
 styleSheet.textContent = additionalStyles;

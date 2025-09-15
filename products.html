@@ -20,14 +20,10 @@
             </div>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
-                <a href="products.html" class="nav-link active">Products <i class="fas fa-chevron-down"></i></a>
-                <a href="about.html" class="nav-link">About <i class="fas fa-chevron-down"></i></a>
-                <a href="pricing.html" class="nav-link">Pricing <i class="fas fa-chevron-down"></i></a>
-            </div>
-            <div class="nav-actions">
-                <button class="btn btn-login">Login</button>
-                <button class="btn btn-primary">Try StudiQ Free <i class="fas fa-arrow-right"></i></button>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
         </nav>
     </header>
@@ -251,7 +247,7 @@
                             <ul>
                                 <li><i class="fas fa-check"></i> Complete roadmap for academic and career goals</li>
                                 <li><i class="fas fa-check"></i> Curated learning resources and materials</li>
-                                <li><i class="fas fa-check"></i> Personal mentor assignment and guidance</li>
+                                <li><i class="fas fa-check"></i> Personal guider</li>
                                 <li><i class="fas fa-check"></i> Advanced analytics and progress tracking</li>
                                 <li><i class="fas fa-check"></i> Priority AI tutor support</li>
                                 <li><i class="fas fa-check"></i> Exclusive study groups and communities</li>
@@ -260,15 +256,15 @@
                         
                         <div class="feature-example">
                             <div class="example-box">
-                                <div class="example-title">Mentorship Program:</div>
+                                <div class="example-title">Personal Guider:</div>
                                 <div class="example-content">
                                     <div class="mentorship-info">
                                         <div class="mentor-card">
                                             <div class="mentor-avatar"></div>
                                             <div class="mentor-info">
-                                                <div class="mentor-name">Dr. Sarah Johnson</div>
-                                                <div class="mentor-title">Computer Science Professor</div>
-                                                <div class="mentor-expertise">AI & Machine Learning</div>
+                                                <div class="mentor-name">AI Personal Guider</div>
+                                                <div class="mentor-title">Available 24/7</div>
+                                                <div class="mentor-expertise">Personalized Learning Support</div>
                                             </div>
                                         </div>
                                     </div>
@@ -373,68 +369,6 @@
         </div>
     </section>
 
-    <!-- Success Stories -->
-    <section class="success-stories">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Success Stories</h2>
-                <p class="section-description">Real results from StudiQ learners around the world</p>
-            </div>
-            
-            <div class="stories-grid">
-                <div class="story-card">
-                    <div class="story-content">
-                        <div class="story-quote">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="story-text">"StudiQ helped me transition from marketing to data science. The AI tutor made complex concepts easy to understand, and the career finder guided me to the right learning path."</p>
-                        <div class="story-author">
-                            <div class="author-avatar"></div>
-                            <div class="author-info">
-                                <h4 class="author-name">Maria Rodriguez</h4>
-                                <p class="author-title">Data Scientist at TechCorp</p>
-                                <p class="author-achievement">Career Change Success</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="story-card">
-                    <div class="story-content">
-                        <div class="story-quote">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="story-text">"The personalized study plans helped me improve my grades significantly. I went from struggling with calculus to acing my exams in just 3 months."</p>
-                        <div class="story-author">
-                            <div class="author-avatar"></div>
-                            <div class="author-info">
-                                <h4 class="author-name">James Chen</h4>
-                                <p class="author-title">Engineering Student</p>
-                                <p class="author-achievement">Grade Improvement: C+ to A</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="story-card">
-                    <div class="story-content">
-                        <div class="story-quote">
-                            <i class="fas fa-quote-left"></i>
-                        </div>
-                        <p class="story-text">"As a working professional, StudiQ's flexible learning schedule and AI tutor made it possible to upskill while maintaining my job. The mentorship program was invaluable."</p>
-                        <div class="story-author">
-                            <div class="author-avatar"></div>
-                            <div class="author-info">
-                                <h4 class="author-name">David Kim</h4>
-                                <p class="author-title">Software Developer</p>
-                                <p class="author-achievement">Promoted to Senior Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- CTA Section -->
     <section class="cta">
@@ -443,8 +377,7 @@
                 <h2 class="cta-title">Start Your Learning Journey Today</h2>
                 <p class="cta-description">Join thousands of learners who are already transforming their education with StudiQ's AI-powered platform.</p>
                 <div class="cta-actions">
-                    <button class="btn btn-primary btn-large">Start Free Trial <i class="fas fa-arrow-right"></i></button>
-                    <button class="btn btn-outline btn-large">Schedule Demo</button>
+                    <button class="btn btn-primary btn-large" onclick="window.location.href='index.html#contact'">Get Started <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -485,18 +418,14 @@
                     <h4 class="footer-title">Company</h4>
                     <ul class="footer-links">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4 class="footer-title">Connect</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/baljotchohan_01" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/baljotchohan" class="social-link"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
