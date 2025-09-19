@@ -1572,7 +1572,8 @@ body {
     .contact-item:nth-child(1),
     .contact-item:nth-child(2),
     .contact-item:nth-child(3),
-    .contact-item:nth-child(4) {
+    .contact-item:nth-child(4),
+    .contact-item:nth-child(5) {
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
