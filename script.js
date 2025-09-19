@@ -110,33 +110,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu toggle (if needed)
-    const mobileMenuBtn = document.createElement('button');
-    mobileMenuBtn.className = 'mobile-menu-btn';
-    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    mobileMenuBtn.style.display = 'none';
-    
-    const nav = document.querySelector('.nav');
-    nav.appendChild(mobileMenuBtn);
-
-    // Check if mobile menu is needed
-    function checkMobileMenu() {
-        if (window.innerWidth <= 768) {
-            mobileMenuBtn.style.display = 'block';
-            document.querySelector('.nav-menu').style.display = 'none';
-        } else {
-            mobileMenuBtn.style.display = 'none';
-            document.querySelector('.nav-menu').style.display = 'flex';
-        }
-    }
-
-    window.addEventListener('resize', checkMobileMenu);
-    checkMobileMenu();
-
     // Mobile menu functionality
-    mobileMenuBtn.addEventListener('click', function() {
-        const navMenu = document.querySelector('.nav-menu');
-        navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    window.toggleMobileMenu = function() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu) {
+            mobileMenu.classList.toggle('active');
+        }
+    };
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        
+        if (mobileMenu && mobileToggle && !mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.remove('active');
+        }
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu) {
+                mobileMenu.classList.remove('active');
+            }
+        });
     });
 
     // Form handling (if forms are added later)
