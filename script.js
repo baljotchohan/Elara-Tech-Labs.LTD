@@ -227,7 +227,14 @@ function showServiceModal(serviceTitle) {
 
 // Counter animation function
 function animateCounter(element) {
-    const target = parseInt(element.textContent.replace(/\D/g, ''));
+    const originalText = element.textContent;
+    
+    // Don't animate 24/7 - it should remain static
+    if (originalText.includes('24/7')) {
+        return; // Skip animation for 24/7 support
+    }
+    
+    const target = parseInt(originalText.replace(/\D/g, ''));
     const duration = 2000;
     const increment = target / (duration / 16);
     let current = 0;
@@ -239,10 +246,8 @@ function animateCounter(element) {
             clearInterval(timer);
         }
         
-        if (element.textContent.includes('+')) {
+        if (originalText.includes('+')) {
             element.textContent = Math.floor(current) + '+';
-        } else if (element.textContent.includes('/')) {
-            element.textContent = Math.floor(current) + '/7';
         } else {
             element.textContent = Math.floor(current);
         }
