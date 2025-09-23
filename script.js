@@ -122,8 +122,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu functionality
     window.toggleMobileMenu = function() {
         const mobileMenu = document.getElementById('mobileMenu');
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        
         if (mobileMenu) {
             mobileMenu.classList.toggle('active');
+            
+            // Add visual feedback for toggle button
+            if (mobileToggle) {
+                mobileToggle.classList.toggle('active');
+            }
         }
     };
 
@@ -132,8 +139,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
         
-        if (mobileMenu && mobileToggle && !mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (mobileMenu && mobileToggle && 
+            !mobileToggle.contains(e.target) && 
+            !mobileMenu.contains(e.target)) {
             mobileMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
         }
     });
 
@@ -142,11 +152,33 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobileMenu');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            
             if (mobileMenu) {
                 mobileMenu.classList.remove('active');
             }
+            if (mobileToggle) {
+                mobileToggle.classList.remove('active');
+            }
         });
     });
+
+    // Prevent body scroll when mobile menu is open
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenu) {
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    if (mobileMenu.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+        });
+        observer.observe(mobileMenu, { attributes: true });
+    }
 
     // Form handling (if forms are added later)
     const forms = document.querySelectorAll('form');

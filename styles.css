@@ -1480,15 +1480,28 @@ body {
         box-sizing: border-box;
     }
     
-    body {
+    html, body {
         overflow-x: hidden;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
     
     .container {
         padding: 0 15px;
         width: 100%;
         max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Header fixes */
+    .header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
     }
     
     .nav {
@@ -1497,6 +1510,17 @@ body {
         position: relative;
         justify-content: space-between;
         width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    .nav-brand {
+        flex-shrink: 0;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+        white-space: nowrap;
     }
     
     .nav-menu {
@@ -1506,6 +1530,54 @@ body {
     .mobile-menu-toggle {
         display: block;
         padding: 0.5rem;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.3rem;
+        cursor: pointer;
+        z-index: 1001;
+        transition: transform 0.3s ease;
+    }
+    
+    .mobile-menu-toggle.active {
+        transform: rotate(90deg);
+    }
+    
+    .mobile-menu-toggle:hover {
+        color: #fbbf24;
+    }
+    
+    .mobile-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1rem 15px;
+        flex-direction: column;
+        gap: 0.5rem;
+        z-index: 999;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mobile-menu.active {
+        display: flex;
+    }
+    
+    .mobile-menu .nav-link {
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+    
+    .mobile-menu .nav-link:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
     
     /* Hero Section Mobile */
@@ -1933,10 +2005,58 @@ body {
         font-size: 0.8rem;
     }
     
+    /* Fix right-side spacing and ensure full width */
+    .hero,
+    .services,
+    .product-showcase,
+    .collaboration,
+    .about,
+    .cta,
+    .contact,
+    .footer {
+        width: 100%;
+        margin: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .hero-content,
+    .services-grid,
+    .product-content,
+    .collaboration-content,
+    .about-content,
+    .contact-content,
+    .footer-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Ensure no horizontal overflow */
+    .service-card,
+    .contact-item,
+    .feature-card,
+    .btn {
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+    
+    /* Fix any elements that might cause horizontal scroll */
+    img, video, iframe, canvas, svg {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Ensure proper text wrapping */
+    h1, h2, h3, h4, h5, h6, p, span, a {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
     /* Fix any overflow issues */
     .monitor {
-        width: 250px;
-        height: 150px;
+        width: 200px;
+        height: 120px;
     }
     
     .monitor-screen {
