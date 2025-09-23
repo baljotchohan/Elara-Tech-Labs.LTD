@@ -119,66 +119,83 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu functionality
-    window.toggleMobileMenu = function() {
-        console.log('Mobile menu toggle clicked'); // Debug log
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        
-        console.log('Mobile menu element:', mobileMenu); // Debug log
-        
-        if (mobileMenu) {
-            mobileMenu.classList.toggle('active');
-            console.log('Mobile menu classes:', mobileMenu.className); // Debug log
-            
-            // Add visual feedback for toggle button
-            if (mobileToggle) {
-                mobileToggle.classList.toggle('active');
-            }
-        } else {
-            console.error('Mobile menu element not found!'); // Debug log
-        }
-    };
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-        const mobileMenu = document.getElementById('mobileMenu');
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        
-        if (mobileMenu && mobileToggle && 
-            !mobileToggle.contains(e.target) && 
-            !mobileMenu.contains(e.target)) {
-            mobileMenu.classList.remove('active');
-            mobileToggle.classList.remove('active');
-        }
-    });
-
-    // Close mobile menu when clicking on a link
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu .nav-link');
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const mobileToggle = document.querySelector('.mobile-menu-toggle');
-            
-            if (mobileMenu) {
-                mobileMenu.classList.remove('active');
-            }
-            if (mobileToggle) {
-                mobileToggle.classList.remove('active');
-            }
-        });
-    });
-
-    // Alternative mobile menu toggle using event listener
-    const mobileToggleButton = document.querySelector('.mobile-menu-toggle');
-    if (mobileToggleButton) {
-        mobileToggleButton.addEventListener('click', function(e) {
+    // Simple and reliable mobile menu functionality
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileToggle && mobileMenu) {
+        // Toggle mobile menu
+        mobileToggle.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            console.log('Event listener triggered'); // Debug log
-            window.toggleMobileMenu();
+            
+            console.log('Mobile menu button clicked');
+            
+            // Toggle the active class
+            mobileMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+                console.log('Mobile menu opened');
+            } else {
+                document.body.style.overflow = '';
+                console.log('Mobile menu closed');
+            }
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+                mobileToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    } else {
+        console.error('Mobile menu elements not found!');
+        console.log('Available elements:', {
+            mobileToggle: document.getElementById('mobileToggle'),
+            mobileMenu: document.getElementById('mobileMenu'),
+            allButtons: document.querySelectorAll('button'),
+            allDivs: document.querySelectorAll('div')
         });
     }
+    
+    // Add a simple test to verify the menu works
+    setTimeout(() => {
+        console.log('Testing mobile menu elements...');
+        const testToggle = document.getElementById('mobileToggle');
+        const testMenu = document.getElementById('mobileMenu');
+        
+        if (testToggle && testMenu) {
+            console.log('✅ Mobile menu elements found and ready');
+            console.log('Toggle button:', testToggle);
+            console.log('Menu element:', testMenu);
+        } else {
+            console.log('❌ Mobile menu elements missing');
+        }
+    }, 1000);
 
     // Prevent body scroll when mobile menu is open
     const mobileMenu = document.getElementById('mobileMenu');
