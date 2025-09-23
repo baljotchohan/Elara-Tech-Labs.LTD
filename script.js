@@ -20,6 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Add click handlers for all buttons
+    initializeButtonHandlers();
+    
+    // Add hero CTA buttons
+    addHeroCTAButtons();
+    
+    // Add interactive elements
+    addInteractiveElements();
+
     // Header background change on scroll
     const header = document.querySelector('.header');
     window.addEventListener('scroll', function() {
@@ -343,18 +352,208 @@ const additionalStyles = `
     }
 `;
 
-// Scroll to contact function
-function scrollToContact() {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
+// Initialize all button handlers
+function initializeButtonHandlers() {
+    // Service card buttons - Get Started buttons
+    const getStartedButtons = document.querySelectorAll('.btn[onclick*="window.open"]');
+    getStartedButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://studio-eight-weld.vercel.app/', '_blank');
+        });
+    });
+
+    // Contact buttons
+    const contactButtons = document.querySelectorAll('.btn[onclick*="scrollToContact"], .btn:contains("Contact")');
+    contactButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            scrollToContact();
+        });
+    });
+
+    // StudiQ platform button (in products section)
+    const studiQButton = document.querySelector('#products .btn-primary');
+    if (studiQButton) {
+        studiQButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.open('https://studio--learnflow-ai-co3xd.us-central1.hosted.app', '_blank');
+        });
+    }
+
+    // Social media links
+    const socialLinks = document.querySelectorAll('a[href*="instagram"], a[href*="twitter"], a[href*="linkedin"], a[href*="whatsapp"]');
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const url = this.getAttribute('href');
+            window.open(url, '_blank');
+        });
+    });
+
+    // Footer links
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                scrollToSection(href);
+            } else if (href.includes('.html')) {
+                window.location.href = href;
+            }
+        });
+    });
+
+    // Logo click to scroll to top
+    const logo = document.querySelector('.logo-text');
+    if (logo) {
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        logo.style.cursor = 'pointer';
+    }
+
+    // Add click handlers to all section titles for smooth scrolling
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles.forEach(title => {
+        title.addEventListener('click', function() {
+            const section = this.closest('section');
+            if (section && section.id) {
+                scrollToSection('#' + section.id);
+            }
+        });
+        title.style.cursor = 'pointer';
+    });
+}
+
+// Add hero CTA buttons
+function addHeroCTAButtons() {
+    const heroSection = document.querySelector('.hero');
+    if (heroSection && !heroSection.querySelector('.hero-actions')) {
+        const heroText = heroSection.querySelector('.hero-text');
+        const heroActions = document.createElement('div');
+        heroActions.className = 'hero-actions';
+        heroActions.innerHTML = `
+            <button class="btn btn-primary btn-large" onclick="scrollToSection('#services')">
+                Explore Services <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-outline btn-large" onclick="scrollToSection('#products')">
+                View Products <i class="fas fa-play"></i>
+            </button>
+        `;
+        heroText.appendChild(heroActions);
+    }
+}
+
+// Add interactive elements
+function addInteractiveElements() {
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.service-card, .contact-item, .feature-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.boxShadow = '0 8px 30px rgba(0, 0, 0, 0.15)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+        });
+    });
+
+    // Add click effects to buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // Create ripple effect
+            createRippleEffect(this, e);
+        });
+    });
+
+    // Add scroll animations
+    addScrollAnimations();
+}
+
+// Create ripple effect for buttons
+function createRippleEffect(button, event) {
+    const ripple = document.createElement('span');
+    const rect = button.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = event.clientX - rect.left - size / 2;
+    const y = event.clientY - rect.top - size / 2;
+    
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    ripple.classList.add('ripple');
+    
+    button.style.position = 'relative';
+    button.style.overflow = 'hidden';
+    button.appendChild(ripple);
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 600);
+}
+
+// Add scroll animations
+function addScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.service-card, .contact-item, .product-content, .collaboration-content, .about-content, .feature-card');
+    animateElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
+
+// Scroll to specific section
+function scrollToSection(sectionId) {
+    const section = document.querySelector(sectionId);
+    if (section) {
         const headerHeight = document.querySelector('.header').offsetHeight;
-        const targetPosition = contactSection.offsetTop - headerHeight;
+        const targetPosition = section.offsetTop - headerHeight;
         
         window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
         });
     }
+}
+
+// Scroll to contact function
+function scrollToContact() {
+    scrollToSection('#contact');
+}
+
+// Open Elara Tech Labs platform function
+function openElaraTechLabs() {
+    window.open('https://studio-eight-weld.vercel.app/', '_blank');
+}
+
+// Open StudiQ platform function
+function openStudiQ() {
+    window.open('https://studio--learnflow-ai-co3xd.us-central1.hosted.app', '_blank');
 }
 
 // Inject additional styles

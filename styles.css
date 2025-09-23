@@ -209,6 +209,26 @@ body {
     gap: 0.5rem;
     text-decoration: none;
     font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.btn .fa-rocket {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover .fa-rocket {
+    transform: translateX(3px) rotate(15deg);
 }
 
 .btn-primary {
@@ -276,6 +296,48 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.hero-actions .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-actions .btn-primary {
+    background: #fbbf24;
+    color: #1e3a8a;
+    border: 2px solid #fbbf24;
+}
+
+.hero-actions .btn-primary:hover {
+    background: #f59e0b;
+    border-color: #f59e0b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+}
+
+.hero-actions .btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.hero-actions .btn-outline:hover {
+    background: white;
+    color: #1e3a8a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
 .hero-illustration {
@@ -414,11 +476,31 @@ body {
     margin-bottom: 4rem;
 }
 
+.section-header .btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.section-header .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
     color: #1e3a8a;
     margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.section-title:hover {
+    color: #3b82f6;
 }
 
 .section-description {
@@ -446,6 +528,24 @@ body {
 .service-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-card .btn-outline {
+    transition: all 0.3s ease;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    background: transparent;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+}
+
+.service-card .btn-outline:hover {
+    background: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    border-color: #2563eb;
 }
 
 .service-icon {
@@ -1416,6 +1516,16 @@ body {
         font-size: 1.1rem;
     }
     
+    .hero-actions {
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .hero-actions .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
     .hero-illustration {
         height: 300px;
         margin-top: 2rem;
@@ -1673,6 +1783,12 @@ body {
     
     .section-description {
         font-size: 1rem;
+    }
+    
+    .section-header .btn {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
     }
     
     /* Ensure all sections are visible */
