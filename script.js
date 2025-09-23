@@ -121,16 +121,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Mobile menu functionality
     window.toggleMobileMenu = function() {
+        console.log('Mobile menu toggle clicked'); // Debug log
         const mobileMenu = document.getElementById('mobileMenu');
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
         
+        console.log('Mobile menu element:', mobileMenu); // Debug log
+        
         if (mobileMenu) {
             mobileMenu.classList.toggle('active');
+            console.log('Mobile menu classes:', mobileMenu.className); // Debug log
             
             // Add visual feedback for toggle button
             if (mobileToggle) {
                 mobileToggle.classList.toggle('active');
             }
+        } else {
+            console.error('Mobile menu element not found!'); // Debug log
         }
     };
 
@@ -162,6 +168,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Alternative mobile menu toggle using event listener
+    const mobileToggleButton = document.querySelector('.mobile-menu-toggle');
+    if (mobileToggleButton) {
+        mobileToggleButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Event listener triggered'); // Debug log
+            window.toggleMobileMenu();
+        });
+    }
 
     // Prevent body scroll when mobile menu is open
     const mobileMenu = document.getElementById('mobileMenu');
