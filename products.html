@@ -1,472 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - StudiQ | Elara Tech Labs</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stradike · AI Study OS by Elara Tech Labs</title>
+  <meta name="description" content="Stradike is an AI-powered study operating system for students. Personalized memory, RAG knowledge, AI tutoring, and career guidance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <div class="logo">
-                    <span class="logo-text">Elara Tech Labs</span>
-                </div>
-            </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="products.html" class="nav-link active">Products</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="products.html" class="nav-link active">Products</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title">StudiQ - AI Learning Platform</h1>
-                <p class="page-description">Our flagship AI-based learning platform focused on personalized education and skill enhancement</p>
-            </div>
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-mark">E</span>
+        <span class="logo-word">Elara<span class="logo-accent">Tech</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank" class="btn btn--ghost btn--sm">Launch App</a>
+        <a href="index.html#contact" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank" class="btn btn--primary">Launch Stradike &rarr;</a>
+    </div>
+  </nav>
+
+  <!-- PRODUCT HERO -->
+  <section class="product-hero dot-bg">
+    <div class="product-hero__bg"></div>
+    <div class="container">
+      <div class="product-hero__content">
+        <div class="product-spotlight__badge" style="margin-bottom:24px;display:inline-flex;">Live &amp; Active</div>
+        <div class="product-name text-gold">STRADIKE</div>
+        <p class="product-tagline">The AI Study Operating System</p>
+        <p class="product-desc">Stradike doesn't just answer your questions — it learns who you are as a student. Built on persistent memory and RAG-powered knowledge, it delivers a genuinely personalized AI education experience for every learner.</p>
+        <div class="product-hero__actions">
+          <a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank" class="btn btn--primary btn--lg">Launch Stradike <i class="fas fa-arrow-right"></i></a>
+          <a href="index.html#contact" class="btn btn--ghost btn--lg">Partner With Us</a>
         </div>
-    </section>
-
-    <!-- StudiQ Overview -->
-    <section class="product-overview">
-        <div class="container">
-            <div class="product-hero">
-                <div class="product-hero-content">
-                    <div class="product-hero-text">
-                        <h2 class="product-hero-title">Revolutionize Your Learning Experience</h2>
-                        <p class="product-hero-description">StudiQ is our flagship AI-based learning platform that transforms traditional education through personalized learning experiences, intelligent tutoring, and adaptive study plans. Whether you're a student, professional, or lifelong learner, StudiQ adapts to your unique learning style and pace.</p>
-                        
-                        <div class="product-stats">
-                            <div class="stat-item">
-                                <div class="stat-number">10,000+</div>
-                                <div class="stat-label">Active Learners</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">95%</div>
-                                <div class="stat-label">Success Rate</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">50+</div>
-                                <div class="stat-label">Subjects Covered</div>
-                            </div>
-                        </div>
-                        
-                        <div class="product-actions">
-                            <button class="btn btn-primary btn-large" onclick="window.open('https://studio--learnflow-ai-co3xd.us-central1.hosted.app', '_blank')">Start Learning Free <i class="fas fa-arrow-right"></i></button>
-                            <button class="btn btn-outline btn-large">Watch Demo</button>
-                        </div>
-                    </div>
-                    <div class="product-hero-visual">
-                        <div class="studiq-dashboard">
-                            <div class="dashboard-header">
-                                <div class="dashboard-title">StudiQ Dashboard</div>
-                                <div class="dashboard-status">Active Learning</div>
-                            </div>
-                            <div class="dashboard-content">
-                                <div class="learning-progress">
-                                    <div class="progress-circle">
-                                        <div class="progress-fill"></div>
-                                        <div class="progress-text">85%</div>
-                                    </div>
-                                    <div class="progress-label">Course Progress</div>
-                                </div>
-                                <div class="ai-tutor-chat">
-                                    <div class="chat-message ai-message">
-                                        <div class="message-avatar ai-avatar"></div>
-                                        <div class="message-content">How can I help you understand this concept better?</div>
-                                    </div>
-                                    <div class="chat-message user-message">
-                                        <div class="message-content">I'm struggling with calculus derivatives</div>
-                                        <div class="message-avatar user-avatar"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="product-hero__stats">
+          <div class="product-hero__stat">
+            <strong>10k+</strong>
+            <span>Active Learners</span>
+          </div>
+          <div class="product-hero__stat">
+            <strong>95%</strong>
+            <span>Success Rate</span>
+          </div>
+          <div class="product-hero__stat">
+            <strong>50+</strong>
+            <span>Subjects Covered</span>
+          </div>
+          <div class="product-hero__stat">
+            <strong>24/7</strong>
+            <span>AI Availability</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Core Features -->
-    <section class="core-features">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Core Features</h2>
-                <p class="section-description">Powerful AI-driven features that make learning personalized, efficient, and engaging</p>
-            </div>
-            
-            <div class="features-grid">
-                <!-- AI Tutor Feature -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">AI Tutor</h3>
-                        <p class="feature-description">Our intelligent virtual tutor provides personalized assistance, answering questions, explaining complex concepts, and adapting to your learning pace and style.</p>
-                        
-                        <div class="feature-details">
-                            <h4>Key Capabilities:</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> 24/7 availability for instant help</li>
-                                <li><i class="fas fa-check"></i> Natural language processing for clear explanations</li>
-                                <li><i class="fas fa-check"></i> Adaptive difficulty based on your progress</li>
-                                <li><i class="fas fa-check"></i> Multi-language support</li>
-                                <li><i class="fas fa-check"></i> Visual and interactive explanations</li>
-                                <li><i class="fas fa-check"></i> Progress tracking and feedback</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="feature-example">
-                            <div class="example-box">
-                                <div class="example-title">Example Interaction:</div>
-                                <div class="example-content">
-                                    <div class="chat-example">
-                                        <div class="chat-line user">"Can you explain photosynthesis?"</div>
-                                        <div class="chat-line ai">"Photosynthesis is the process by which plants convert sunlight into energy. Let me show you a visual diagram..."</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Study Plans Feature -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">AI-Based Study Plans</h3>
-                        <p class="feature-description">Personalized study schedules that adapt to your learning goals, available time, and optimal learning patterns for maximum efficiency.</p>
-                        
-                        <div class="feature-details">
-                            <h4>Smart Planning Features:</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Personalized daily and weekly schedules</li>
-                                <li><i class="fas fa-check"></i> Adaptive timing based on your peak performance hours</li>
-                                <li><i class="fas fa-check"></i> Subject prioritization based on difficulty and importance</li>
-                                <li><i class="fas fa-check"></i> Break optimization for better retention</li>
-                                <li><i class="fas fa-check"></i> Progress-based schedule adjustments</li>
-                                <li><i class="fas fa-check"></i> Goal-oriented milestone tracking</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="feature-example">
-                            <div class="example-box">
-                                <div class="example-title">Sample Study Plan:</div>
-                                <div class="example-content">
-                                    <div class="study-plan">
-                                        <div class="plan-item">
-                                            <span class="time">9:00 AM</span>
-                                            <span class="subject">Mathematics - Calculus</span>
-                                        </div>
-                                        <div class="plan-item">
-                                            <span class="time">10:30 AM</span>
-                                            <span class="subject">Break & Review</span>
-                                        </div>
-                                        <div class="plan-item">
-                                            <span class="time">11:00 AM</span>
-                                            <span class="subject">Physics - Mechanics</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Career Finder Feature -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">AI Career Finder</h3>
-                        <p class="feature-description">An intelligent tool that analyzes your interests, skills, and learning patterns to recommend potential career paths and required skill development.</p>
-                        
-                        <div class="feature-details">
-                            <h4>Career Guidance Features:</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Interest and aptitude assessment</li>
-                                <li><i class="fas fa-check"></i> Skill gap analysis</li>
-                                <li><i class="fas fa-check"></i> Career path recommendations</li>
-                                <li><i class="fas fa-check"></i> Industry trend analysis</li>
-                                <li><i class="fas fa-check"></i> Salary and growth projections</li>
-                                <li><i class="fas fa-check"></i> Required education and certification tracking</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="feature-example">
-                            <div class="example-box">
-                                <div class="example-title">Career Match Example:</div>
-                                <div class="example-content">
-                                    <div class="career-match">
-                                        <div class="match-score">92% Match</div>
-                                        <div class="career-title">Data Scientist</div>
-                                        <div class="career-details">
-                                            <div class="detail-item">
-                                                <span class="label">Required Skills:</span>
-                                                <span class="value">Python, Statistics, Machine Learning</span>
-                                            </div>
-                                            <div class="detail-item">
-                                                <span class="label">Your Progress:</span>
-                                                <span class="value">75% Complete</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Membership Features -->
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3 class="feature-title">Premium Membership Features</h3>
-                        <p class="feature-description">Access to comprehensive learning resources, personal mentorship, and complete roadmaps for achieving your academic and career goals.</p>
-                        
-                        <div class="feature-details">
-                            <h4>Membership Benefits:</h4>
-                            <ul>
-                                <li><i class="fas fa-check"></i> Complete roadmap for academic and career goals</li>
-                                <li><i class="fas fa-check"></i> Curated learning resources and materials</li>
-                                <li><i class="fas fa-check"></i> Personal guider</li>
-                                <li><i class="fas fa-check"></i> Advanced analytics and progress tracking</li>
-                                <li><i class="fas fa-check"></i> Priority AI tutor support</li>
-                                <li><i class="fas fa-check"></i> Exclusive study groups and communities</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="feature-example">
-                            <div class="example-box">
-                                <div class="example-title">Personal Guider:</div>
-                                <div class="example-content">
-                                    <div class="mentorship-info">
-                                        <div class="mentor-card">
-                                            <div class="mentor-avatar"></div>
-                                            <div class="mentor-info">
-                                                <div class="mentor-name">AI Personal Guider</div>
-                                                <div class="mentor-title">Available 24/7</div>
-                                                <div class="mentor-expertise">Personalized Learning Support</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- WHAT IS STRADIKE -->
+  <section class="section bg-surface" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="product-spotlight__inner">
+        <div class="fade-up">
+          <div class="tag">The Concept</div>
+          <h2 class="section-title" style="text-align:left;">Not a Chatbot. An Operating System for Learning.</h2>
+          <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.85;margin-bottom:16px;">
+            Traditional EdTech gives you access to content. Stradike gives you an intelligent partner that grows alongside you. Every session, every question, every concept mastered — all stored in your personal memory layer.
+          </p>
+          <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.85;margin-bottom:16px;">
+            The next time you log in, Stradike knows exactly where you left off, what you struggled with, what learning style works for you, and what to teach you next. It's not just personalization — it's genuine AI-driven educational intelligence.
+          </p>
+          <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.85;">
+            Under the hood: RAG (Retrieval-Augmented Generation) systems ensure every answer is grounded in accurate, verified knowledge — not hallucination. Your AI tutor is both brilliant and honest.
+          </p>
         </div>
-    </section>
-
-    <!-- Learning Paths -->
-    <section class="learning-paths">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Popular Learning Paths</h2>
-                <p class="section-description">Structured learning journeys designed by experts for different goals and skill levels</p>
+        <div class="fade-up fade-up-delay-2">
+          <div class="product-card-mock">
+            <div class="product-card-mock__header">
+              <div class="product-card-mock__dots"><span></span><span></span><span></span></div>
+              <span class="product-card-mock__title">stradike.ai &mdash; Memory Profile</span>
             </div>
-            
-            <div class="paths-grid">
-                <div class="path-card">
-                    <div class="path-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="path-content">
-                        <h3 class="path-title">Software Development</h3>
-                        <p class="path-description">Master programming languages, frameworks, and development practices</p>
-                        <div class="path-details">
-                            <div class="path-duration">6-12 months</div>
-                            <div class="path-level">Beginner to Advanced</div>
-                        </div>
-                        <div class="path-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
-                        </div>
-                    </div>
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="padding:12px 14px;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;">
+                <div style="font-size:0.72rem;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Learning Style</div>
+                <div style="font-size:0.875rem;color:var(--text-primary);font-weight:600;">Visual + Analogical Reasoning</div>
+              </div>
+              <div style="padding:12px 14px;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;">
+                <div style="font-size:0.72rem;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Strong Areas</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;">
+                  <span class="pill" style="font-size:0.75rem;">Physics</span>
+                  <span class="pill" style="font-size:0.75rem;">Computer Science</span>
+                  <span class="pill" style="font-size:0.75rem;">Mathematics</span>
                 </div>
-                
-                <div class="path-card">
-                    <div class="path-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="path-content">
-                        <h3 class="path-title">Data Science & Analytics</h3>
-                        <p class="path-description">Learn data analysis, machine learning, and statistical modeling</p>
-                        <div class="path-details">
-                            <div class="path-duration">8-15 months</div>
-                            <div class="path-level">Intermediate to Advanced</div>
-                        </div>
-                        <div class="path-skills">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">R</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">TensorFlow</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="path-card">
-                    <div class="path-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <div class="path-content">
-                        <h3 class="path-title">Digital Marketing</h3>
-                        <p class="path-description">Master online marketing strategies, SEO, and social media</p>
-                        <div class="path-details">
-                            <div class="path-duration">4-8 months</div>
-                            <div class="path-level">Beginner to Intermediate</div>
-                        </div>
-                        <div class="path-skills">
-                            <span class="skill-tag">SEO</span>
-                            <span class="skill-tag">Google Ads</span>
-                            <span class="skill-tag">Social Media</span>
-                            <span class="skill-tag">Analytics</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="path-card">
-                    <div class="path-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <div class="path-content">
-                        <h3 class="path-title">Cybersecurity</h3>
-                        <p class="path-description">Learn to protect systems and networks from cyber threats</p>
-                        <div class="path-details">
-                            <div class="path-duration">6-12 months</div>
-                            <div class="path-level">Intermediate to Advanced</div>
-                        </div>
-                        <div class="path-skills">
-                            <span class="skill-tag">Network Security</span>
-                            <span class="skill-tag">Ethical Hacking</span>
-                            <span class="skill-tag">Risk Assessment</span>
-                            <span class="skill-tag">Compliance</span>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div style="padding:12px 14px;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;">
+                <div style="font-size:0.72rem;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Today's AI Plan</div>
+                <div style="font-size:0.875rem;color:var(--gold);font-weight:600;">Resume: Quantum Mechanics &rarr; Wave Functions</div>
+              </div>
+              <div style="padding:12px 14px;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;">
+                <div style="font-size:0.72rem;color:var(--text-muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:6px;">Career Match</div>
+                <div style="font-size:0.875rem;color:var(--text-primary);font-weight:600;">AI/ML Engineering &mdash; 94% fit</div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
+  <!-- CORE FEATURES -->
+  <section class="section dot-bg" id="features">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">Core Features</div>
+        <h2 class="section-title">Everything a Student Needs, Powered by AI</h2>
+        <p class="section-desc">Stradike brings together the most powerful educational AI capabilities into one seamless, intelligent platform.</p>
+      </div>
+      <div class="features-grid">
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Start Your Learning Journey Today</h2>
-                <p class="cta-description">Join thousands of learners who are already transforming their education with StudiQ's AI-powered platform.</p>
-                <div class="cta-actions">
-                    <button class="btn btn-primary btn-large" onclick="window.open('https://studio--learnflow-ai-co3xd.us-central1.hosted.app', '_blank')">Start Your Learning Now <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
+        <div class="feature-card fade-up">
+          <div class="feature-card__icon"><i class="fas fa-robot"></i></div>
+          <h3 class="feature-card__title">AI Tutor</h3>
+          <p class="feature-card__desc">Your personal AI tutor that adapts to your knowledge level, learning pace, and preferred explanation style. Ask anything — get answers that make sense <em>to you</em>.</p>
+          <ul class="feature-card__detail">
+            <li><i class="fas fa-check-circle"></i> Socratic teaching method support</li>
+            <li><i class="fas fa-check-circle"></i> Multi-modal explanations (visual, text, analogies)</li>
+            <li><i class="fas fa-check-circle"></i> Concept-by-concept mastery tracking</li>
+            <li><i class="fas fa-check-circle"></i> Instant doubt resolution, 24/7</li>
+          </ul>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <div class="logo">
-                            <span class="logo-text">Elara Tech Labs</span>
-                        </div>
-                        <p class="footer-description">AI-powered digital solutions for the modern world.</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">SaaS Solutions</a></li>
-                        <li><a href="services.html">AI Automations</a></li>
-                        <li><a href="services.html">AI Agency Services</a></li>
-                        <li><a href="services.html">Custom Software</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Products</h4>
-                    <ul class="footer-links">
-                        <li><a href="products.html">StudiQ Platform</a></li>
-                        <li><a href="products.html">AI Tutor</a></li>
-                        <li><a href="products.html">Career Finder</a></li>
-                        <li><a href="products.html">Study Plans</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Connect</h4>
-                    <div class="social-links">
-                        <div class="social-group">
-                            <h5 class="social-group-title">Baljot's Social Media</h5>
-                            <div class="social-group-links">
-                                <a href="https://instagram.com/baljotchohan_01" class="social-link" title="Baljot's Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="https://twitter.com/baljotchohan" class="social-link" title="Baljot's Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                                <a href="https://www.linkedin.com/in/baljot-chohan-866ba6356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" title="Baljot's LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            </div>
-                        </div>
-                        <div class="social-group">
-                            <h5 class="social-group-title">Damandeep's Social Media</h5>
-                            <div class="social-group-links">
-                                <a href="https://www.instagram.com/x7_daman?igsh=ejhiMHZoZXl3ZzRp" class="social-link" title="Damandeep's Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="https://twitter.com/damandeep018" class="social-link" title="Damandeep's Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                            </div>
-                        </div>
-                        <div class="social-group">
-                            <h5 class="social-group-title">Community</h5>
-                            <div class="social-group-links">
-                                <a href="https://chat.whatsapp.com/H7j3XOc4zQs6nIFS8ok0xi" class="social-link" title="WhatsApp Community"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Elara Tech Labs. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                    <a href="#cookies">Cookie Policy</a>
-                </div>
-            </div>
+        <div class="feature-card fade-up fade-up-delay-1">
+          <div class="feature-card__icon"><i class="fas fa-memory"></i></div>
+          <h3 class="feature-card__title">Persistent Memory System</h3>
+          <p class="feature-card__desc">Stradike remembers everything — your strengths, gaps, preferred explanations, and learning history. Every session builds on the last. No starting from zero.</p>
+          <ul class="feature-card__detail">
+            <li><i class="fas fa-check-circle"></i> Cross-session context retention</li>
+            <li><i class="fas fa-check-circle"></i> Personalized knowledge graph</li>
+            <li><i class="fas fa-check-circle"></i> Weak area identification and reinforcement</li>
+            <li><i class="fas fa-check-circle"></i> Progress visualization over time</li>
+          </ul>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="feature-card fade-up fade-up-delay-2">
+          <div class="feature-card__icon"><i class="fas fa-calendar-check"></i></div>
+          <h3 class="feature-card__title">AI Study Plans</h3>
+          <p class="feature-card__desc">Dynamic, AI-generated study schedules tailored to your goals, available time, and current knowledge level. Plans that adapt as you learn — not rigid templates.</p>
+          <ul class="feature-card__detail">
+            <li><i class="fas fa-check-circle"></i> Goal-based curriculum design</li>
+            <li><i class="fas fa-check-circle"></i> Exam and deadline integration</li>
+            <li><i class="fas fa-check-circle"></i> Daily adaptive scheduling</li>
+            <li><i class="fas fa-check-circle"></i> Spaced repetition optimization</li>
+          </ul>
+        </div>
+
+        <div class="feature-card fade-up fade-up-delay-3">
+          <div class="feature-card__icon"><i class="fas fa-compass"></i></div>
+          <h3 class="feature-card__title">AI Career Guidance</h3>
+          <p class="feature-card__desc">Stradike maps your academic strengths, interests, and performance to real-world career paths — then builds a personalized roadmap to get you there.</p>
+          <ul class="feature-card__detail">
+            <li><i class="fas fa-check-circle"></i> Skill-to-career matching engine</li>
+            <li><i class="fas fa-check-circle"></i> Industry trend awareness</li>
+            <li><i class="fas fa-check-circle"></i> Subject-to-profession pathways</li>
+            <li><i class="fas fa-check-circle"></i> Action plan generation</li>
+          </ul>
+        </div>
+
+        <div class="feature-card fade-up fade-up-delay-4">
+          <div class="feature-card__icon"><i class="fas fa-database"></i></div>
+          <h3 class="feature-card__title">RAG Knowledge Engine</h3>
+          <p class="feature-card__desc">Retrieval-Augmented Generation ensures every answer Stradike gives is grounded in verified, accurate information — not AI hallucination. Accuracy you can trust.</p>
+          <ul class="feature-card__detail">
+            <li><i class="fas fa-check-circle"></i> Verified curriculum knowledge base</li>
+            <li><i class="fas fa-check-circle"></i> Source-cited responses</li>
+            <li><i class="fas fa-check-circle"></i> Real-time knowledge retrieval</li>
+            <li><i class="fas fa-check-circle"></i> Hallucination prevention layer</li>
+          </ul>
+        </div>
+
+        <div class="feature-card fade-up fade-up-delay-5">
+          <div class="feature-card__icon"><i class="fas fa-crown"></i></div>
+          <h3 class="feature-card__title">Premium Features</h3>
+          <p class="feature-card__desc">Unlock advanced capabilities including priority AI processing, unlimited study sessions, exclusive subject packs, and direct access to learning specialists.</p>
+          <ul class="feature-card__detail">
+            <li><i class="fas fa-check-circle"></i> Unlimited AI sessions</li>
+            <li><i class="fas fa-check-circle"></i> Advanced analytics dashboard</li>
+            <li><i class="fas fa-check-circle"></i> Expert review sessions</li>
+            <li><i class="fas fa-check-circle"></i> Early access to new features</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section class="tech-section section" id="tech">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">Under the Hood</div>
+        <h2 class="section-title">Built on Cutting-Edge AI Architecture</h2>
+        <p class="section-desc">Stradike is powered by a sophisticated AI stack designed for personalization, accuracy, and scale.</p>
+      </div>
+      <div class="tech-grid fade-up fade-up-delay-1">
+        <div class="tech-item">
+          <div class="tech-item__icon"><i class="fas fa-database"></i></div>
+          <div class="tech-item__name">RAG Systems</div>
+          <p class="tech-item__desc">Retrieval-Augmented Generation for factual, grounded, accurate AI responses every time.</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__icon"><i class="fas fa-memory"></i></div>
+          <div class="tech-item__name">Vector Memory</div>
+          <p class="tech-item__desc">Persistent vector database stores your entire learning history for genuine long-term personalization.</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__icon"><i class="fas fa-brain"></i></div>
+          <div class="tech-item__name">LLM Core</div>
+          <p class="tech-item__desc">State-of-the-art large language models fine-tuned for educational contexts and student interaction.</p>
+        </div>
+        <div class="tech-item">
+          <div class="tech-item__icon"><i class="fas fa-project-diagram"></i></div>
+          <div class="tech-item__name">Agent Framework</div>
+          <p class="tech-item__desc">Autonomous AI agents handle study planning, content retrieval, and progress tracking in real-time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARNING PATHS -->
+  <section class="section dot-bg">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">Popular Paths</div>
+        <h2 class="section-title">Where Students Are Heading</h2>
+        <p class="section-desc">The most popular AI-curated learning journeys on Stradike — each one personalized to the individual learner.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;" class="fade-up fade-up-delay-1">
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-code"></i></div>
+          <h3 class="service-card__title">Software Development</h3>
+          <p class="service-card__desc">From programming fundamentals to advanced system design — Stradike builds your dev skills with a fully personalized curriculum mapped to your pace and goals.</p>
+          <ul class="service-card__list">
+            <li>Data structures &amp; algorithms</li>
+            <li>Web &amp; mobile development</li>
+            <li>System design &amp; architecture</li>
+            <li>Interview preparation</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-chart-bar"></i></div>
+          <h3 class="service-card__title">Data Science &amp; AI</h3>
+          <p class="service-card__desc">The most in-demand path of the decade — Stradike guides you through statistics, ML, deep learning, and real-world AI applications with adaptive depth.</p>
+          <ul class="service-card__list">
+            <li>Statistics &amp; probability</li>
+            <li>Machine learning fundamentals</li>
+            <li>Deep learning &amp; neural networks</li>
+            <li>AI engineering practices</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-bullhorn"></i></div>
+          <h3 class="service-card__title">Digital Marketing</h3>
+          <p class="service-card__desc">Master the full digital marketing stack — SEO, paid acquisition, content strategy, analytics, and AI-powered marketing tools — with real-world case studies.</p>
+          <ul class="service-card__list">
+            <li>SEO &amp; content marketing</li>
+            <li>Paid media &amp; performance</li>
+            <li>Brand strategy</li>
+            <li>AI marketing tools</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="service-card__title">Cybersecurity</h3>
+          <p class="service-card__desc">Build the skills to defend digital infrastructure. Stradike covers ethical hacking, network security, cryptography, and compliance frameworks at your pace.</p>
+          <ul class="service-card__list">
+            <li>Ethical hacking fundamentals</li>
+            <li>Network security</li>
+            <li>Cryptography</li>
+            <li>Security operations</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="fade-up">
+        <div class="tag" style="margin-bottom:20px;">Start Learning</div>
+        <h2 class="cta-banner__title">
+          Your Personalized AI Tutor<br>
+          <span class="text-gold">Is Ready for You</span>
+        </h2>
+        <p class="cta-banner__desc">Join thousands of students already learning smarter with Stradike. Your AI remembers. Your progress compounds. Your future takes shape.</p>
+        <div class="cta-banner__actions">
+          <a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank" class="btn btn--primary btn--lg">Launch Stradike Free</a>
+          <a href="index.html#contact" class="btn btn--ghost btn--lg">Partner Inquiry</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="display:inline-flex;margin-bottom:16px;">
+            <span class="logo-mark">E</span>
+            <span class="logo-word">Elara<span class="logo-accent">Tech</span></span>
+          </a>
+          <p>Building the intelligence layer of tomorrow — AI agents, automation, and intelligent software for the modern enterprise.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Team</a></li>
+            <li><a href="about.html#values">Values</a></li>
+            <li><a href="index.html#contact">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__links">
+            <li><a href="services.html">AI Agents</a></li>
+            <li><a href="services.html">Automation</a></li>
+            <li><a href="services.html">SaaS Development</a></li>
+            <li><a href="services.html">AI Consulting</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Stradike</div>
+          <ul class="footer__links">
+            <li><a href="products.html">Overview</a></li>
+            <li><a href="products.html#features">Features</a></li>
+            <li><a href="products.html#tech">Technology</a></li>
+            <li><a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank">Launch App</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Elara Tech Labs Ltd. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

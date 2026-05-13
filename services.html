@@ -1,408 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Elara Tech Labs</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services · Elara Tech Labs</title>
+  <meta name="description" content="AI agents, automation systems, SaaS development, and custom AI solutions built by Elara Tech Labs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <div class="logo">
-                    <span class="logo-text">Elara Tech Labs</span>
-                </div>
-            </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link active">Services</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link active">Services</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title">Our Services</h1>
-                <p class="page-description">Comprehensive AI-driven solutions to transform your business operations and drive digital transformation</p>
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-mark">E</span>
+        <span class="logo-word">Elara<span class="logo-accent">Tech</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="products.html" class="btn btn--ghost btn--sm">Stradike</a>
+        <a href="index.html#contact" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#contact" class="btn btn--primary">Get Started &rarr;</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero dot-bg">
+    <div class="page-hero__bg"></div>
+    <div class="container">
+      <div class="page-hero__content">
+        <div class="tag">What We Build</div>
+        <h1 class="page-hero__heading">
+          <span class="text-gold">Enterprise AI Services</span><br>
+          Built for Scale
+        </h1>
+        <p class="page-hero__desc">From autonomous AI agents to complete SaaS platforms — we deliver precision-engineered intelligent solutions that drive measurable outcomes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE DETAILS -->
+  <section class="section">
+    <div class="container">
+      <div class="services-detail-grid">
+
+        <div class="service-detail-card fade-up">
+          <div class="service-detail-card__left">
+            <div class="service-detail-card__icon"><i class="fas fa-robot"></i></div>
+            <div class="service-detail-card__tag">Core Service</div>
+            <div class="service-detail-card__title">AI Agents &amp; Automation</div>
+          </div>
+          <div class="service-detail-card__right">
+            <p class="service-detail-card__desc">
+              We design and deploy autonomous AI agents capable of executing complex, multi-step workflows across your entire organization. These aren't simple chatbots — they are intelligent systems that perceive, reason, decide, and act without constant human supervision. From customer support pipelines to back-office process automation, our agents operate 24/7 with enterprise-grade reliability.
+            </p>
+            <div class="feature-pills">
+              <span class="pill">Multi-agent systems</span>
+              <span class="pill">LangChain / LangGraph</span>
+              <span class="pill">Workflow automation</span>
+              <span class="pill">Real-time decision engines</span>
+              <span class="pill">API integrations</span>
+              <span class="pill">Process mining</span>
+              <span class="pill">Intelligent document processing</span>
+              <span class="pill">Event-driven pipelines</span>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Services Overview -->
-    <section class="services-overview">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Core Services</h2>
-                <p class="section-description">We provide cutting-edge AI solutions across multiple domains to meet diverse business needs</p>
+        <div class="service-detail-card fade-up fade-up-delay-1">
+          <div class="service-detail-card__left">
+            <div class="service-detail-card__icon"><i class="fas fa-layer-group"></i></div>
+            <div class="service-detail-card__tag">Core Service</div>
+            <div class="service-detail-card__title">Software as a Service (SaaS)</div>
+          </div>
+          <div class="service-detail-card__right">
+            <p class="service-detail-card__desc">
+              End-to-end SaaS product development — from early-stage architecture through to production deployment and beyond. We build scalable, performant, and beautifully designed software products with AI capabilities natively integrated. Whether you're launching a new product or scaling an existing one, we engineer for growth from day one.
+            </p>
+            <div class="feature-pills">
+              <span class="pill">Full-stack development</span>
+              <span class="pill">Cloud infrastructure</span>
+              <span class="pill">Multi-tenant architecture</span>
+              <span class="pill">Authentication &amp; billing</span>
+              <span class="pill">CI/CD pipelines</span>
+              <span class="pill">AI feature integration</span>
+              <span class="pill">Performance optimization</span>
+              <span class="pill">Scalability planning</span>
             </div>
-            
-            <div class="services-detailed">
-                <!-- SaaS Services -->
-                <div class="service-detail-card">
-                    <div class="service-detail-content">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <div class="service-detail-text">
-                            <h3 class="service-detail-title">Software as a Service (SaaS)</h3>
-                            <p class="service-detail-description">Our cloud-based software solutions are designed to be easily accessible, scalable, and secure. We create SaaS products that streamline workflows, improve efficiency, and reduce operational complexity for businesses of all sizes.</p>
-                            
-                            <div class="service-features">
-                                <h4>Key Features:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Cloud-based infrastructure with 99.9% uptime</li>
-                                    <li><i class="fas fa-check"></i> Scalable architecture that grows with your business</li>
-                                    <li><i class="fas fa-check"></i> Enterprise-grade security and compliance</li>
-                                    <li><i class="fas fa-check"></i> Real-time data synchronization</li>
-                                    <li><i class="fas fa-check"></i> Multi-platform accessibility</li>
-                                    <li><i class="fas fa-check"></i> Automated updates and maintenance</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="service-benefits">
-                                <h4>Business Benefits:</h4>
-                                <ul>
-                                    <li>Reduced IT infrastructure costs</li>
-                                    <li>Improved collaboration and productivity</li>
-                                    <li>Enhanced data security and backup</li>
-                                    <li>Faster deployment and implementation</li>
-                                    <li>24/7 technical support</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Automations -->
-                <div class="service-detail-card">
-                    <div class="service-detail-content">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="service-detail-text">
-                            <h3 class="service-detail-title">AI Automations</h3>
-                            <p class="service-detail-description">Transform your business processes with our intelligent automation solutions. Our AI-powered systems automate repetitive and complex tasks, optimizing productivity, minimizing errors, and saving valuable time for your team.</p>
-                            
-                            <div class="service-features">
-                                <h4>Automation Capabilities:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Document processing and data extraction</li>
-                                    <li><i class="fas fa-check"></i> Customer service chatbots and virtual assistants</li>
-                                    <li><i class="fas fa-check"></i> Workflow automation and task scheduling</li>
-                                    <li><i class="fas fa-check"></i> Predictive analytics and forecasting</li>
-                                    <li><i class="fas fa-check"></i> Email and communication automation</li>
-                                    <li><i class="fas fa-check"></i> Inventory and supply chain optimization</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="service-benefits">
-                                <h4>ROI Benefits:</h4>
-                                <ul>
-                                    <li>Up to 80% reduction in manual tasks</li>
-                                    <li>Improved accuracy and consistency</li>
-                                    <li>Faster processing times</li>
-                                    <li>Reduced operational costs</li>
-                                    <li>Enhanced customer satisfaction</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Agency Services -->
-                <div class="service-detail-card">
-                    <div class="service-detail-content">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <div class="service-detail-text">
-                            <h3 class="service-detail-title">AI Agency Services</h3>
-                            <p class="service-detail-description">We act as your comprehensive AI agency, helping you manage, scale, and automate your business operations. Our services include strategy development, AI solution implementation, and ongoing support tailored to your unique requirements.</p>
-                            
-                            <div class="service-features">
-                                <h4>Service Offerings:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> AI strategy consulting and planning</li>
-                                    <li><i class="fas fa-check"></i> Custom AI solution development</li>
-                                    <li><i class="fas fa-check"></i> Data analysis and insights generation</li>
-                                    <li><i class="fas fa-check"></i> Machine learning model training</li>
-                                    <li><i class="fas fa-check"></i> AI integration and deployment</li>
-                                    <li><i class="fas fa-check"></i> Ongoing maintenance and optimization</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="service-benefits">
-                                <h4>Partnership Benefits:</h4>
-                                <ul>
-                                    <li>Dedicated AI experts and consultants</li>
-                                    <li>Customized solutions for your industry</li>
-                                    <li>Continuous innovation and updates</li>
-                                    <li>Scalable solutions that grow with you</li>
-                                    <li>Comprehensive training and support</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Problem-Solving Software -->
-                <div class="service-detail-card">
-                    <div class="service-detail-content">
-                        <div class="service-detail-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <div class="service-detail-text">
-                            <h3 class="service-detail-title">Problem-Solving Software Solutions</h3>
-                            <p class="service-detail-description">We develop custom AI-driven software solutions to solve industry-specific challenges. Our solutions are data-driven, result-oriented, and designed to adapt to evolving business needs and market conditions.</p>
-                            
-                            <div class="service-features">
-                                <h4>Solution Types:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Industry-specific AI applications</li>
-                                    <li><i class="fas fa-check"></i> Custom business intelligence tools</li>
-                                    <li><i class="fas fa-check"></i> Advanced analytics platforms</li>
-                                    <li><i class="fas fa-check"></i> Machine learning pipelines</li>
-                                    <li><i class="fas fa-check"></i> Real-time decision support systems</li>
-                                    <li><i class="fas fa-check"></i> Integration with existing systems</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="service-benefits">
-                                <h4>Value Proposition:</h4>
-                                <ul>
-                                    <li>Tailored solutions for unique challenges</li>
-                                    <li>Competitive advantage through innovation</li>
-                                    <li>Improved decision-making capabilities</li>
-                                    <li>Enhanced operational efficiency</li>
-                                    <li>Future-proof technology investments</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Service Process -->
-    <section class="service-process">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Service Process</h2>
-                <p class="section-description">How we deliver exceptional AI solutions to your business</p>
+        <div class="service-detail-card fade-up fade-up-delay-2">
+          <div class="service-detail-card__left">
+            <div class="service-detail-card__icon"><i class="fas fa-brain"></i></div>
+            <div class="service-detail-card__tag">Core Service</div>
+            <div class="service-detail-card__title">AI Agency &amp; Consulting</div>
+          </div>
+          <div class="service-detail-card__right">
+            <p class="service-detail-card__desc">
+              Bespoke AI consulting and implementation services — we bring cutting-edge AI capabilities directly into your existing products, workflows, and teams. From LLM selection and fine-tuning to full RAG system builds and vector database architectures, we handle the technical depth so your team can focus on outcomes. We also provide AI strategy roadmapping for organizations planning their AI transformation.
+            </p>
+            <div class="feature-pills">
+              <span class="pill">LLM integration</span>
+              <span class="pill">RAG system development</span>
+              <span class="pill">Vector databases</span>
+              <span class="pill">Fine-tuning &amp; RLHF</span>
+              <span class="pill">AI strategy</span>
+              <span class="pill">Prompt engineering</span>
+              <span class="pill">Model evaluation</span>
+              <span class="pill">AI safety &amp; alignment</span>
             </div>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Discovery & Analysis</h3>
-                        <p>We begin by understanding your business needs, challenges, and objectives through comprehensive analysis and stakeholder interviews.</p>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Strategy & Planning</h3>
-                        <p>Our experts develop a customized AI strategy and implementation plan tailored to your specific requirements and timeline.</p>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Development & Implementation</h3>
-                        <p>We build and deploy your AI solutions using cutting-edge technologies and best practices, ensuring quality and reliability.</p>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Testing & Optimization</h3>
-                        <p>Rigorous testing and optimization ensure your solutions perform at peak efficiency and deliver maximum value.</p>
-                    </div>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <h3>Launch & Support</h3>
-                        <p>We launch your solutions and provide ongoing support, training, and optimization to ensure continued success.</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- Industries We Serve -->
-    <section class="industries">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Industries We Serve</h2>
-                <p class="section-description">Our AI solutions are designed to meet the unique needs of various industries</p>
+        <div class="service-detail-card fade-up fade-up-delay-3">
+          <div class="service-detail-card__left">
+            <div class="service-detail-card__icon"><i class="fas fa-lightbulb"></i></div>
+            <div class="service-detail-card__tag">Core Service</div>
+            <div class="service-detail-card__title">Custom AI Solutions</div>
+          </div>
+          <div class="service-detail-card__right">
+            <p class="service-detail-card__desc">
+              Some problems don't have off-the-shelf answers. When existing tools fall short, we engineer purpose-built solutions from the ground up. Our process begins with deep problem analysis — understanding the real challenge, the real user, and the real constraint — before designing software that fits precisely. We've solved problems across education, healthcare, finance, and operations with custom AI tooling.
+            </p>
+            <div class="feature-pills">
+              <span class="pill">Problem analysis</span>
+              <span class="pill">Predictive analytics</span>
+              <span class="pill">Computer vision</span>
+              <span class="pill">NLP systems</span>
+              <span class="pill">Recommendation engines</span>
+              <span class="pill">Data pipelines</span>
+              <span class="pill">Custom ML models</span>
+              <span class="pill">AI-powered interfaces</span>
             </div>
-            
-            <div class="industries-grid">
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Education</h3>
-                    <p>Personalized learning platforms, AI tutors, and educational analytics</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Healthcare</h3>
-                    <p>Medical diagnosis assistance, patient care optimization, and health analytics</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-commerce</h3>
-                    <p>Recommendation engines, inventory management, and customer service automation</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3>Finance</h3>
-                    <p>Fraud detection, risk assessment, and automated trading systems</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3>Manufacturing</h3>
-                    <p>Predictive maintenance, quality control, and supply chain optimization</p>
-                </div>
-                
-                <div class="industry-card">
-                    <div class="industry-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Real Estate</h3>
-                    <p>Property valuation, market analysis, and customer matching</p>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Transform Your Business?</h2>
-                <p class="cta-description">Let's discuss how our AI services can solve your specific challenges and drive growth.</p>
-                <div class="cta-actions">
-                    <button class="btn btn-primary btn-large" onclick="window.location.href='index.html#contact'">Get Started <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section bg-surface" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">How We Work</div>
+        <h2 class="section-title">Our Delivery Process</h2>
+        <p class="section-desc">A proven five-stage process designed for clarity, precision, and outcomes — from your first conversation to live deployment.</p>
+      </div>
+      <div class="process-steps fade-up fade-up-delay-1">
+        <div class="process-step">
+          <div class="process-step__num">01</div>
+          <div class="process-step__title">Discovery</div>
+          <p class="process-step__desc">Deep dive into your problem, context, and success criteria. No assumptions — only clarity.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <div class="logo">
-                            <span class="logo-text">Elara Tech Labs</span>
-                        </div>
-                        <p class="footer-description">AI-powered digital solutions for the modern world.</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">SaaS Solutions</a></li>
-                        <li><a href="#services">AI Automations</a></li>
-                        <li><a href="#services">AI Agency Services</a></li>
-                        <li><a href="#services">Custom Software</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Products</h4>
-                    <ul class="footer-links">
-                        <li><a href="products.html">StudiQ Platform</a></li>
-                        <li><a href="products.html">AI Tutor</a></li>
-                        <li><a href="products.html">Career Finder</a></li>
-                        <li><a href="products.html">Study Plans</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Connect</h4>
-                    <div class="social-links">
-                        <div class="social-group">
-                            <h5 class="social-group-title">Baljot's Social Media</h5>
-                            <div class="social-group-links">
-                                <a href="https://instagram.com/baljotchohan_01" class="social-link" title="Baljot's Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="https://twitter.com/baljotchohan" class="social-link" title="Baljot's Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                                <a href="https://www.linkedin.com/in/baljot-chohan-866ba6356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" title="Baljot's LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            </div>
-                        </div>
-                        <div class="social-group">
-                            <h5 class="social-group-title">Damandeep's Social Media</h5>
-                            <div class="social-group-links">
-                                <a href="https://www.instagram.com/x7_daman?igsh=ejhiMHZoZXl3ZzRp" class="social-link" title="Damandeep's Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="https://twitter.com/damandeep018" class="social-link" title="Damandeep's Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                            </div>
-                        </div>
-                        <div class="social-group">
-                            <h5 class="social-group-title">Community</h5>
-                            <div class="social-group-links">
-                                <a href="https://chat.whatsapp.com/H7j3XOc4zQs6nIFS8ok0xi" class="social-link" title="WhatsApp Community"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Elara Tech Labs. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                    <a href="#cookies">Cookie Policy</a>
-                </div>
-            </div>
+        <div class="process-step">
+          <div class="process-step__num">02</div>
+          <div class="process-step__title">Architecture</div>
+          <p class="process-step__desc">System design, technology selection, and solution architecture validated before a single line of code is written.</p>
         </div>
-    </footer>
+        <div class="process-step">
+          <div class="process-step__num">03</div>
+          <div class="process-step__title">Build</div>
+          <p class="process-step__desc">Agile development with continuous client visibility. We build in iterations, not black boxes.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step__num">04</div>
+          <div class="process-step__title">Test &amp; Refine</div>
+          <p class="process-step__desc">Rigorous testing across edge cases, performance thresholds, and real-world conditions before deployment.</p>
+        </div>
+        <div class="process-step">
+          <div class="process-step__num">05</div>
+          <div class="process-step__title">Deploy &amp; Scale</div>
+          <p class="process-step__desc">Production deployment with monitoring, support, and a clear path to scaling as your needs evolve.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- INDUSTRIES -->
+  <section class="section dot-bg">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">Sectors We Serve</div>
+        <h2 class="section-title">Industries We Transform</h2>
+        <p class="section-desc">Our AI solutions adapt across verticals — wherever there is complexity, data, and a need for intelligent automation, we deliver.</p>
+      </div>
+      <div class="industries-grid fade-up fade-up-delay-1">
+        <div class="industry-card">
+          <div class="industry-card__icon"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <div class="industry-card__name">Education &amp; EdTech</div>
+            <div class="industry-card__desc">Personalized learning, AI tutoring, study systems</div>
+          </div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card__icon"><i class="fas fa-heartbeat"></i></div>
+          <div>
+            <div class="industry-card__name">Healthcare</div>
+            <div class="industry-card__desc">Diagnostics, patient workflows, medical AI</div>
+          </div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card__icon"><i class="fas fa-shopping-bag"></i></div>
+          <div>
+            <div class="industry-card__name">E-Commerce &amp; Retail</div>
+            <div class="industry-card__desc">Recommendations, automation, customer intelligence</div>
+          </div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card__icon"><i class="fas fa-chart-line"></i></div>
+          <div>
+            <div class="industry-card__name">Finance &amp; Fintech</div>
+            <div class="industry-card__desc">Risk analysis, compliance automation, AI advisors</div>
+          </div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card__icon"><i class="fas fa-industry"></i></div>
+          <div>
+            <div class="industry-card__name">Manufacturing</div>
+            <div class="industry-card__desc">Predictive maintenance, quality control, logistics</div>
+          </div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-card__icon"><i class="fas fa-building"></i></div>
+          <div>
+            <div class="industry-card__name">Real Estate</div>
+            <div class="industry-card__desc">Property intelligence, valuation AI, market analysis</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="fade-up">
+        <div class="tag" style="margin-bottom:20px;">Start Today</div>
+        <h2 class="cta-banner__title">
+          Ready to Deploy<br>
+          <span class="text-gold">Intelligent Systems?</span>
+        </h2>
+        <p class="cta-banner__desc">Tell us what you're building. We'll tell you exactly how to make it intelligent, automated, and built for scale.</p>
+        <div class="cta-banner__actions">
+          <a href="index.html#contact" class="btn btn--primary btn--lg">Discuss Your Project</a>
+          <a href="products.html" class="btn btn--ghost btn--lg">See Stradike</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="display:inline-flex;margin-bottom:16px;">
+            <span class="logo-mark">E</span>
+            <span class="logo-word">Elara<span class="logo-accent">Tech</span></span>
+          </a>
+          <p>Building the intelligence layer of tomorrow — AI agents, automation, and intelligent software for the modern enterprise.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Team</a></li>
+            <li><a href="about.html#values">Values</a></li>
+            <li><a href="index.html#contact">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__links">
+            <li><a href="services.html">AI Agents</a></li>
+            <li><a href="services.html">Automation</a></li>
+            <li><a href="services.html">SaaS Development</a></li>
+            <li><a href="services.html">AI Consulting</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Products</div>
+          <ul class="footer__links">
+            <li><a href="products.html">Stradike</a></li>
+            <li><a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank">Launch App</a></li>
+            <li><a href="products.html#features">Features</a></li>
+            <li><a href="products.html#tech">Technology</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Elara Tech Labs Ltd. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
