@@ -1,407 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Elara Tech Labs - AI-Powered Digital Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elara Tech Labs · AI Infrastructure Company</title>
+  <meta name="description" content="Elara Tech Labs builds enterprise-grade AI agents, automation systems, and intelligent software — transforming how organizations operate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <div class="logo">
-                    <span class="logo-text">Elara Tech Labs</span>
-                </div>
-            </div>
-            <div class="nav-menu">
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="mobile-menu-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">Get More Done with Elara Tech Labs</h1>
-                    <p class="hero-description">AI-based technology company specializing in cutting-edge digital solutions designed to enhance and automate business operations. Transform your business with intelligent automation and innovative software solutions.</p>
-                </div>
-                <div class="hero-illustration">
-                    <div class="illustration-container">
-                        <div class="ai-character ai-character-1"></div>
-                        <div class="ai-character ai-character-2"></div>
-                        <div class="monitor">
-                            <div class="monitor-screen">
-                                <div class="chart chart-pie"></div>
-                                <div class="chart chart-bar"></div>
-                                <div class="chart chart-line"></div>
-                            </div>
-                        </div>
-                        <div class="floating-elements">
-                            <div class="element element-1"></div>
-                            <div class="element element-2"></div>
-                            <div class="element element-3"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-mark">E</span>
+        <span class="logo-word">Elara<span class="logo-accent">Tech</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="products.html" class="btn btn--ghost btn--sm">Stradike</a>
+        <a href="#contact" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn--primary">Get Started &rarr;</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero dot-bg">
+    <div class="hero__bg">
+      <canvas id="neuralCanvas"></canvas>
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+    </div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="tag">AI Infrastructure &middot; Intelligent Systems &middot; Est. 2025</div>
+        <h1 class="hero__heading">
+          Architecting the<br>
+          <span class="text-gold">Intelligence Layer</span><br>
+          of Tomorrow
+        </h1>
+        <p class="hero__subtext">
+          Elara Tech Labs builds enterprise-grade AI agents, automation pipelines, and intelligent software that transforms how organizations operate in the age of artificial intelligence.
+        </p>
+        <div class="hero__actions">
+          <a href="services.html" class="btn btn--primary btn--lg">Explore Services</a>
+          <a href="products.html" class="btn btn--ghost btn--lg">View Stradike <i class="fas fa-arrow-right"></i></a>
         </div>
-    </section>
+        <div class="hero__scroll-hint">Scroll to explore</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Core Services</h2>
-                <p class="section-description">Comprehensive AI-driven solutions to transform your business operations</p>
-                <button class="btn btn-primary btn-large" onclick="window.open('https://studio-eight-weld.vercel.app/', '_blank')">Get Started <i class="fas fa-rocket"></i></button>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3 class="service-title">Software as a Service (SaaS)</h3>
-                    <p class="service-description">Cloud-based software solutions that are easily accessible, scalable, and secure. Streamline workflows, improve efficiency, and reduce operational complexity.</p>
-                    <button class="btn btn-outline" onclick="window.open('https://studio-eight-weld.vercel.app/', '_blank')">Get Started <i class="fas fa-rocket"></i></button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="service-title">AI Automations</h3>
-                    <p class="service-description">Automate repetitive and complex business processes with our intelligent automation solutions. Optimize productivity, minimize errors, and save valuable time.</p>
-                    <button class="btn btn-outline" onclick="window.open('https://studio-eight-weld.vercel.app/', '_blank')">Get Started <i class="fas fa-rocket"></i></button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3 class="service-title">AI Agency Services</h3>
-                    <p class="service-description">Comprehensive AI agency services to help you manage, scale, and automate your business. Strategy development, implementation, and ongoing support.</p>
-                    <button class="btn btn-outline" onclick="window.open('https://studio-eight-weld.vercel.app/', '_blank')">Get Started <i class="fas fa-rocket"></i></button>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="service-title">Problem-Solving Software</h3>
-                    <p class="service-description">Custom AI-driven software solutions to solve industry-specific challenges. Data-driven, result-oriented, and designed to adapt to evolving business needs.</p>
-                    <button class="btn btn-outline" onclick="window.open('https://studio-eight-weld.vercel.app/', '_blank')">Get Started <i class="fas fa-rocket"></i></button>
-                </div>
-            </div>
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-bar__grid">
+        <div class="stat-item fade-up">
+          <div>
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Projects Delivered</span>
         </div>
-    </section>
-
-    <!-- StudiQ Product Section -->
-    <section id="products" class="product-showcase">
-        <div class="container">
-            <div class="product-content">
-                <div class="product-text">
-                    <h2 class="product-title">StudiQ - Our Flagship Learning Platform</h2>
-                    <p class="product-description">AI-based learning platform focused on personalized education and skill enhancement. Transform your learning experience with intelligent tutoring and adaptive study plans.</p>
-                    <div class="product-features">
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>AI Tutor</h4>
-                                <p>Virtual tutor that assists students in understanding complex topics and concepts</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>AI-Based Study Plans</h4>
-                                <p>Personalized study schedules based on user's selected subjects and concepts</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <div class="feature-icon">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>AI Career Finder</h4>
-                                <p>Intelligent tool that analyzes interests and skills to recommend career paths</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary" onclick="window.open('https://studio--learnflow-ai-co3xd.us-central1.hosted.app', '_blank')">Get Started <i class="fas fa-arrow-right"></i></button>
-                </div>
-                <div class="product-illustration">
-                    <div class="collaboration-scene">
-                        <div class="person person-1"></div>
-                        <div class="person person-2"></div>
-                        <div class="person person-3"></div>
-                        <div class="person person-4"></div>
-                        <div class="laptop"></div>
-                        <div class="ideas">
-                            <div class="idea-icon idea-1"><i class="fas fa-lightbulb"></i></div>
-                            <div class="idea-icon idea-2"><i class="fas fa-chart-bar"></i></div>
-                            <div class="idea-icon idea-3"><i class="fas fa-cog"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-up fade-up-delay-1">
+          <div>
+            <span class="stat-number" data-target="100">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-label">Clients Served</span>
         </div>
-    </section>
-
-    <!-- Collaboration Section -->
-    <section class="collaboration">
-        <div class="container">
-            <div class="collaboration-content">
-                <div class="collaboration-illustration">
-                    <div class="network-diagram">
-                        <div class="central-node">
-                            <div class="node-icon">E</div>
-                        </div>
-                        <div class="outer-nodes">
-                            <div class="node node-1"></div>
-                            <div class="node node-2"></div>
-                            <div class="node node-3"></div>
-                            <div class="node node-4"></div>
-                            <div class="node node-5"></div>
-                            <div class="node node-6"></div>
-                        </div>
-                        <div class="connection-lines">
-                            <div class="line line-1"></div>
-                            <div class="line line-2"></div>
-                            <div class="line line-3"></div>
-                            <div class="line line-4"></div>
-                            <div class="line line-5"></div>
-                            <div class="line line-6"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="collaboration-text">
-                    <h2 class="collaboration-title">Work Together</h2>
-                    <p class="collaboration-description">With Elara Tech Labs, share your projects with your team and collaborate seamlessly. Our platform enables real-time collaboration, secure data sharing, and comprehensive project management tools.</p>
-                    <button class="btn btn-primary" onclick="scrollToContact()">Contact Us <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-up fade-up-delay-2">
+          <div>
+            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">k+</span>
+          </div>
+          <span class="stat-label">Active Learners</span>
         </div>
-    </section>
-
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="about-title">About Elara Tech Labs</h2>
-                    <p class="about-description">We are committed to continuously innovating and providing world-class AI products and services to meet the dynamic needs of the modern world. Our team of experts combines cutting-edge technology with deep industry knowledge to deliver solutions that drive real business value.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label">Happy Clients</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">24/7</div>
-                            <div class="stat-label">Support</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-illustration">
-                    <div class="data-visualization">
-                        <div class="data-node node-1"></div>
-                        <div class="data-node node-2"></div>
-                        <div class="data-node node-3"></div>
-                        <div class="data-node node-4"></div>
-                        <div class="data-connections">
-                            <div class="connection connection-1"></div>
-                            <div class="connection connection-2"></div>
-                            <div class="connection connection-3"></div>
-                        </div>
-                        <div class="security-icons">
-                            <div class="security-icon"><i class="fas fa-lock"></i></div>
-                            <div class="security-icon"><i class="fas fa-folder"></i></div>
-                            <div class="security-icon"><i class="fas fa-cloud"></i></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item fade-up fade-up-delay-3">
+          <div>
+            <span class="stat-number">24/7</span>
+          </div>
+          <span class="stat-label">Support Available</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
+  <!-- SERVICES -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">Core Offerings</div>
+        <h2 class="section-title">What We Build</h2>
+        <p class="section-desc">Precision-engineered AI solutions that drive measurable impact — from intelligent agents to full-scale automation infrastructures.</p>
+      </div>
+      <div class="services__grid">
 
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Transform Your Business?</h2>
-                <p class="cta-description">Join thousands of businesses already using Elara Tech Labs to automate, optimize, and scale their operations.</p>
-            </div>
+        <div class="service-card fade-up">
+          <div class="service-card__icon"><i class="fas fa-robot"></i></div>
+          <h3 class="service-card__title">AI Agents &amp; Automation</h3>
+          <p class="service-card__desc">Autonomous AI agents that handle complex workflows, decision-making, and operations without human intervention — 24/7.</p>
+          <ul class="service-card__list">
+            <li>Multi-agent orchestration systems</li>
+            <li>Business process automation</li>
+            <li>Intelligent document processing</li>
+            <li>Real-time decision pipelines</li>
+          </ul>
+          <a href="services.html" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-description">Ready to transform your business with AI? Let's discuss your project.</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>StudiQ Platform</h3>
-                            <p>Experience our flagship AI learning platform</p>
-                            <a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank">Try StudiQ Now</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Instagram</h3>
-                            <p>Follow our team for updates and behind-the-scenes content</p>
-                            <a href="https://instagram.com/baljotchohan_01" target="_blank">@baljotchohan_01</a>
-                            <br>
-                            <a href="https://www.instagram.com/x7_daman?igsh=ejhiMHZoZXl3ZzRp" target="_blank">@x7_daman</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Twitter</h3>
-                            <p>Connect with our team for AI insights and company news</p>
-                            <a href="https://twitter.com/baljotchohan" target="_blank">@baljotchohan</a>
-                            <br>
-                            <a href="https://twitter.com/damandeep018" target="_blank">@damandeep018</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>LinkedIn</h3>
-                            <p>Connect with our founder for professional networking</p>
-                            <a href="https://www.linkedin.com/in/baljot-chohan-866ba6356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">Baljot Singh Chohan</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>WhatsApp Community</h3>
-                            <p>Join our WhatsApp community for updates and discussions</p>
-                            <a href="https://chat.whatsapp.com/H7j3XOc4zQs6nIFS8ok0xi" target="_blank">Join ElaraTechLabs Community</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="service-card fade-up fade-up-delay-1">
+          <div class="service-card__icon"><i class="fas fa-layer-group"></i></div>
+          <h3 class="service-card__title">Software as a Service (SaaS)</h3>
+          <p class="service-card__desc">End-to-end SaaS product development — from architecture to deployment — built for scale, performance, and growth.</p>
+          <ul class="service-card__list">
+            <li>Full-stack product engineering</li>
+            <li>Scalable cloud infrastructure</li>
+            <li>SaaS architecture &amp; design</li>
+            <li>Multi-tenant systems</li>
+          </ul>
+          <a href="services.html" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <div class="logo">
-                            <span class="logo-text">Elara Tech Labs</span>
-                        </div>
-                        <p class="footer-description">AI-powered digital solutions for the modern world.</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">SaaS Solutions</a></li>
-                        <li><a href="#services">AI Automations</a></li>
-                        <li><a href="#services">AI Agency Services</a></li>
-                        <li><a href="#services">Custom Software</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Products</h4>
-                    <ul class="footer-links">
-                        <li><a href="#products">StudiQ Platform</a></li>
-                        <li><a href="#products">AI Tutor</a></li>
-                        <li><a href="#products">Career Finder</a></li>
-                        <li><a href="#products">Study Plans</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Connect</h4>
-                    <div class="social-links">
-                        <div class="social-group">
-                            <h5 class="social-group-title">Baljot's Social Media</h5>
-                            <div class="social-group-links">
-                                <a href="https://instagram.com/baljotchohan_01" class="social-link" title="Baljot's Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="https://twitter.com/baljotchohan" class="social-link" title="Baljot's Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                                <a href="https://www.linkedin.com/in/baljot-chohan-866ba6356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" title="Baljot's LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            </div>
-                        </div>
-                        <div class="social-group">
-                            <h5 class="social-group-title">Damandeep's Social Media</h5>
-                            <div class="social-group-links">
-                                <a href="https://www.instagram.com/x7_daman?igsh=ejhiMHZoZXl3ZzRp" class="social-link" title="Damandeep's Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="https://twitter.com/damandeep018" class="social-link" title="Damandeep's Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                            </div>
-                        </div>
-                        <div class="social-group">
-                            <h5 class="social-group-title">Community</h5>
-                            <div class="social-group-links">
-                                <a href="https://chat.whatsapp.com/H7j3XOc4zQs6nIFS8ok0xi" class="social-link" title="WhatsApp Community"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Elara Tech Labs. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                    <a href="#cookies">Cookie Policy</a>
-                </div>
-            </div>
+        <div class="service-card fade-up fade-up-delay-2">
+          <div class="service-card__icon"><i class="fas fa-brain"></i></div>
+          <h3 class="service-card__title">AI Agency Services</h3>
+          <p class="service-card__desc">Bespoke AI consulting and implementation — bringing cutting-edge AI capabilities into your existing products and workflows.</p>
+          <ul class="service-card__list">
+            <li>LLM integration &amp; fine-tuning</li>
+            <li>RAG system development</li>
+            <li>AI strategy &amp; roadmapping</li>
+            <li>Custom model deployment</li>
+          </ul>
+          <a href="services.html" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
         </div>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="service-card fade-up fade-up-delay-3">
+          <div class="service-card__icon"><i class="fas fa-lightbulb"></i></div>
+          <h3 class="service-card__title">Custom AI Solutions</h3>
+          <p class="service-card__desc">Deep-dive problem analysis and purpose-built software for unique challenges that off-the-shelf tools cannot solve.</p>
+          <ul class="service-card__list">
+            <li>Industry-specific AI tools</li>
+            <li>Predictive analytics systems</li>
+            <li>Data pipeline engineering</li>
+            <li>AI-powered interfaces</li>
+          </ul>
+          <a href="services.html" class="service-card__link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT SPOTLIGHT — STRADIKE -->
+  <section class="product-spotlight section">
+    <div class="container">
+      <div class="product-spotlight__inner">
+
+        <div class="product-spotlight__text fade-up">
+          <div class="product-spotlight__badge">Live Product</div>
+          <h2 class="product-spotlight__heading">
+            Meet <span class="text-gold">Stradike</span> —<br>
+            The AI Study OS
+          </h2>
+          <p class="product-spotlight__sub">Personalized. Memory-Driven. Intelligent.</p>
+          <p class="product-spotlight__desc">
+            Stradike is a next-generation AI-powered study operating system built for students. It doesn't just answer questions — it learns how you think, remembers what you know, and builds a personalized intelligence layer around your entire academic journey.
+          </p>
+          <div class="product-spotlight__features">
+            <div class="product-feature">
+              <div class="product-feature__icon"><i class="fas fa-memory"></i></div>
+              <div class="product-feature__text">
+                <strong>Persistent Memory System</strong>
+                <span>Remembers every concept you've learned, every mistake you've made, and adapts accordingly.</span>
+              </div>
+            </div>
+            <div class="product-feature">
+              <div class="product-feature__icon"><i class="fas fa-database"></i></div>
+              <div class="product-feature__text">
+                <strong>RAG-Powered Knowledge</strong>
+                <span>Retrieval-augmented generation ensures every answer is grounded in verified, accurate information.</span>
+              </div>
+            </div>
+            <div class="product-feature">
+              <div class="product-feature__icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="product-feature__text">
+                <strong>AI Career Guidance</strong>
+                <span>Maps your strengths and interests to real-world career paths with actionable study plans.</span>
+              </div>
+            </div>
+          </div>
+          <div class="product-spotlight__actions">
+            <a href="products.html" class="btn btn--primary">Explore Stradike</a>
+            <a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank" class="btn btn--ghost">Launch App <i class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
+        <div class="product-visual fade-up fade-up-delay-2">
+          <div class="product-card-mock">
+            <div class="product-card-mock__header">
+              <div class="product-card-mock__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="product-card-mock__title">stradike.ai &mdash; AI Tutor</span>
+            </div>
+            <div class="ai-chat">
+              <div class="chat-msg chat-msg--user">
+                <div class="chat-avatar">U</div>
+                <div class="chat-bubble">Explain quantum entanglement like I'm a visual learner who struggles with math.</div>
+              </div>
+              <div class="chat-msg chat-msg--ai">
+                <div class="chat-avatar">AI</div>
+                <div class="chat-bubble">Based on your memory profile, I know you understand wave patterns well. Think of two entangled particles as two ripples on a pond — whatever happens to one instantly affects the other, no matter the distance...</div>
+              </div>
+              <div class="chat-msg chat-msg--user">
+                <div class="chat-avatar">U</div>
+                <div class="chat-bubble">That makes sense! Add it to my study plan.</div>
+              </div>
+              <div class="chat-msg chat-msg--ai">
+                <div class="chat-avatar">AI</div>
+                <div class="chat-bubble">
+                  <div class="typing-dots"><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="product-stats">
+              <div class="product-stat">
+                <strong>10k+</strong>
+                <span>Active Users</span>
+              </div>
+              <div class="product-stat">
+                <strong>95%</strong>
+                <span>Success Rate</span>
+              </div>
+              <div class="product-stat">
+                <strong>50+</strong>
+                <span>Subjects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ELARA -->
+  <section class="section dot-bg">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">Why Choose Us</div>
+        <h2 class="section-title">Built Different</h2>
+        <p class="section-desc">We don't just build products. We architect intelligent systems designed for the next decade of human-AI collaboration.</p>
+      </div>
+      <div class="capabilities__grid">
+        <div class="cap-card fade-up">
+          <div class="cap-card__num">01</div>
+          <h3 class="cap-card__title">AI-First Architecture</h3>
+          <p class="cap-card__desc">Every solution we build has intelligence at its core — not bolted on. From data pipelines to user interfaces, AI is the foundation, not a feature.</p>
+        </div>
+        <div class="cap-card fade-up fade-up-delay-1">
+          <div class="cap-card__num">02</div>
+          <h3 class="cap-card__title">Memory &amp; Context Systems</h3>
+          <p class="cap-card__desc">We build AI that remembers. Persistent context, RAG pipelines, and vector memory systems that make AI interactions genuinely personalized over time.</p>
+        </div>
+        <div class="cap-card fade-up fade-up-delay-2">
+          <div class="cap-card__num">03</div>
+          <h3 class="cap-card__title">Enterprise-Grade Quality</h3>
+          <p class="cap-card__desc">High-availability infrastructure, security-first design, and performance engineering — built to handle real-world scale with zero compromise.</p>
+        </div>
+        <div class="cap-card fade-up fade-up-delay-3">
+          <div class="cap-card__num">04</div>
+          <h3 class="cap-card__title">Speed &amp; Precision</h3>
+          <p class="cap-card__desc">Rapid delivery without sacrificing depth. We move fast because our process is engineered for it — not because we cut corners.</p>
+        </div>
+        <div class="cap-card fade-up fade-up-delay-4">
+          <div class="cap-card__num">05</div>
+          <h3 class="cap-card__title">Human-Centered Design</h3>
+          <p class="cap-card__desc">Powerful systems that feel intuitive. We design for the human experience first — because the best AI is the kind you forget you're using.</p>
+        </div>
+        <div class="cap-card fade-up fade-up-delay-5">
+          <div class="cap-card__num">06</div>
+          <h3 class="cap-card__title">Continuous Evolution</h3>
+          <p class="cap-card__desc">The AI landscape shifts weekly. Our systems are modular and upgradeable — built to adopt new capabilities as they emerge, without rebuilding from scratch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="fade-up">
+        <div class="tag" style="margin-bottom:20px;">Ready to Build?</div>
+        <h2 class="cta-banner__title">
+          Let's Build Something<br>
+          <span class="text-gold">Extraordinary Together</span>
+        </h2>
+        <p class="cta-banner__desc">Whether you need an AI agent, a full SaaS platform, or automation infrastructure — we're ready to architect it with you.</p>
+        <div class="cta-banner__actions">
+          <a href="#contact" class="btn btn--primary btn--lg">Start a Project</a>
+          <a href="services.html" class="btn btn--ghost btn--lg">View All Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="fade-up">
+          <div class="tag">Get in Touch</div>
+          <h2 class="contact-info__title">Let's Start a Conversation</h2>
+          <p class="contact-info__desc">Have a project in mind? Reach out and let's discuss how Elara Tech Labs can transform your vision into an intelligent, scalable reality.</p>
+          <div class="contact-channels">
+            <a href="mailto:hello@elaratechlabs.com" class="contact-channel">
+              <div class="contact-channel__icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="contact-channel__label">Email</div>
+                <div class="contact-channel__value">hello@elaratechlabs.com</div>
+              </div>
+            </a>
+            <a href="https://wa.me/+1234567890" target="_blank" class="contact-channel">
+              <div class="contact-channel__icon"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <div class="contact-channel__label">WhatsApp</div>
+                <div class="contact-channel__value">Message us directly</div>
+              </div>
+            </a>
+            <a href="https://instagram.com/elaratechlabs" target="_blank" class="contact-channel">
+              <div class="contact-channel__icon"><i class="fab fa-instagram"></i></div>
+              <div>
+                <div class="contact-channel__label">Instagram</div>
+                <div class="contact-channel__value">@elaratechlabs</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/company/elaratechlabs" target="_blank" class="contact-channel">
+              <div class="contact-channel__icon"><i class="fab fa-linkedin"></i></div>
+              <div>
+                <div class="contact-channel__label">LinkedIn</div>
+                <div class="contact-channel__value">Elara Tech Labs</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form fade-up fade-up-delay-2">
+          <h3 class="contact-form__title">Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interest</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option>AI Agents &amp; Automation</option>
+                <option>SaaS Development</option>
+                <option>AI Agency Services</option>
+                <option>Custom AI Solutions</option>
+                <option>Stradike / EdTech</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="display:inline-flex;margin-bottom:16px;">
+            <span class="logo-mark">E</span>
+            <span class="logo-word">Elara<span class="logo-accent">Tech</span></span>
+          </a>
+          <p>Building the intelligence layer of tomorrow — AI agents, automation, and intelligent software for the modern enterprise.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com/elaratechlabs" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/elaratechlabs" target="_blank" class="social-link" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://linkedin.com/company/elaratechlabs" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/elaratechlabs" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Team</a></li>
+            <li><a href="about.html#values">Values</a></li>
+            <li><a href="#contact">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__links">
+            <li><a href="services.html">AI Agents</a></li>
+            <li><a href="services.html">Automation</a></li>
+            <li><a href="services.html">SaaS Development</a></li>
+            <li><a href="services.html">AI Consulting</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Products</div>
+          <ul class="footer__links">
+            <li><a href="products.html">Stradike</a></li>
+            <li><a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank">Launch App</a></li>
+            <li><a href="products.html#features">Features</a></li>
+            <li><a href="products.html#tech">Technology</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Elara Tech Labs Ltd. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

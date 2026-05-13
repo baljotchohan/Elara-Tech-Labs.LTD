@@ -1,481 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Elara Tech Labs</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Elara Tech Labs</title>
+  <meta name="description" content="Elara Tech Labs — founded in 2025, building AI infrastructure that transforms how organizations operate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <div class="logo">
-                    <span class="logo-text">Elara Tech Labs</span>
-                </div>
-            </div>
-            <div class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="about.html" class="nav-link active">About</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="about.html" class="nav-link active">About</a>
-                <a href="index.html#contact" class="nav-link">Contact</a>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title">About Elara Tech Labs</h1>
-                <p class="page-description">Pioneering the future of AI-driven digital solutions</p>
-            </div>
+  <!-- NAV -->
+  <nav class="nav scrolled" id="nav">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo">
+        <span class="logo-mark">E</span>
+        <span class="logo-word">Elara<span class="logo-accent">Tech</span></span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="products.html" class="btn btn--ghost btn--sm">Stradike</a>
+        <a href="index.html#contact" class="btn btn--primary btn--sm">Get Started</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="products.html">Products</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="index.html#contact" class="btn btn--primary">Get Started &rarr;</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero dot-bg">
+    <div class="page-hero__bg"></div>
+    <div class="container">
+      <div class="page-hero__content">
+        <div class="tag">Our Story</div>
+        <h1 class="page-hero__heading">
+          We Are <span class="text-gold">Elara Tech Labs</span>
+        </h1>
+        <p class="page-hero__desc">A team of young, relentless builders on a mission to make artificial intelligence the most powerful tool for human progress — starting with education.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-text fade-up">
+          <div class="tag">Origin</div>
+          <h2 class="section-title" style="text-align:left;">Born from a Belief That AI Changes Everything</h2>
+          <p>Elara Tech Labs was founded in 2025 with a singular conviction: AI is not just a tool — it is a fundamental shift in how intelligence operates at scale. We didn't want to wait on the sidelines. We wanted to build.</p>
+          <p>Starting with education — one of the most impactful and underserved sectors for technology — we launched Stradike: an AI-powered study operating system that doesn't just tutor students but truly knows them. It remembers. It adapts. It grows with each learner.</p>
+          <p>Today, Elara Tech Labs is expanding its reach across industries, delivering AI agents, automation systems, and custom intelligent software to organizations that understand the imperative of the AI era.</p>
+          <p>We are young. We move fast. And we build with precision.</p>
         </div>
-    </section>
-
-    <!-- Company Story -->
-    <section class="company-story">
-        <div class="container">
-            <div class="story-content">
-                <div class="story-text">
-                    <h2 class="story-title">Our Story</h2>
-                    <p class="story-description">Elara Tech Labs was founded with a vision to democratize artificial intelligence and make cutting-edge technology accessible to businesses and individuals worldwide. We believe that AI has the power to transform how we work, learn, and solve complex problems.</p>
-                    
-                    <p class="story-description">Since our inception, we have been at the forefront of AI innovation, developing solutions that not only meet today's challenges but anticipate tomorrow's needs. Our team of expert engineers, data scientists, and AI researchers work tirelessly to create products that deliver real value and measurable results.</p>
-                    
-                    <div class="story-highlights">
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <h4>Innovation First</h4>
-                                <p>We prioritize innovation and cutting-edge technology in everything we do</p>
-                            </div>
-                        </div>
-                        
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <h4>User-Centric Design</h4>
-                                <p>Our solutions are designed with the end-user in mind, ensuring intuitive and effective experiences</p>
-                            </div>
-                        </div>
-                        
-                        <div class="highlight-item">
-                            <div class="highlight-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="highlight-content">
-                                <h4>Security & Privacy</h4>
-                                <p>We maintain the highest standards of security and privacy in all our products and services</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="story-visual">
-                    <div class="company-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-year">2025</div>
-                            <div class="timeline-content">
-                                <h4>Company Founded</h4>
-                                <p>Elara Tech Labs established with a mission to democratize AI</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2025</div>
-                            <div class="timeline-content">
-                                <h4>StudiQ Development</h4>
-                                <p>Began development of our flagship learning platform</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2025</div>
-                            <div class="timeline-content">
-                                <h4>StudiQ Launch</h4>
-                                <p>Successfully launched StudiQ with early adopters</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="story-visual fade-up fade-up-delay-2">
+          <div class="timeline-item">
+            <div class="timeline-dot">25</div>
+            <div class="timeline-content">
+              <strong>Elara Tech Labs Founded</strong>
+              <p>Company incorporated with a focus on AI infrastructure and education technology.</p>
             </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-bolt" style="font-size:0.75rem;"></i></div>
+            <div class="timeline-content">
+              <strong>Stradike — First Product Launched</strong>
+              <p>AI-powered study OS deployed to first cohort of students with memory-driven personalization.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-users" style="font-size:0.75rem;"></i></div>
+            <div class="timeline-content">
+              <strong>10,000+ Active Learners</strong>
+              <p>Stradike crosses 10k active users with a 95% reported study improvement rate.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-expand" style="font-size:0.75rem;"></i></div>
+            <div class="timeline-content">
+              <strong>AI Services Division Launched</strong>
+              <p>Expanded into enterprise AI agents, automation pipelines, and custom SaaS development.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-globe" style="font-size:0.75rem;"></i></div>
+            <div class="timeline-content">
+              <strong>Global Expansion — Ongoing</strong>
+              <p>Serving clients across multiple industries and continents with AI-first solutions.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Mission & Vision -->
-    <section class="mission-vision">
-        <div class="container">
-            <div class="mission-vision-content">
-                <div class="mission-card">
-                    <div class="mission-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <div class="mission-content">
-                        <h3 class="mission-title">Our Mission</h3>
-                        <p class="mission-description">To empower businesses and individuals with intelligent AI solutions that enhance productivity, streamline operations, and unlock human potential. We strive to make advanced AI technology accessible, reliable, and beneficial for everyone.</p>
-                    </div>
-                </div>
-                
-                <div class="vision-card">
-                    <div class="vision-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <div class="vision-content">
-                        <h3 class="vision-title">Our Vision</h3>
-                        <p class="vision-description">To become the leading provider of AI-driven solutions that transform how people learn, work, and solve problems. We envision a future where AI seamlessly integrates into daily life, making complex tasks simple and enabling unprecedented levels of human achievement.</p>
-                    </div>
-                </div>
-            </div>
+  <!-- MISSION & VISION -->
+  <section class="section bg-surface" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">Purpose</div>
+        <h2 class="section-title">Mission &amp; Vision</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;" class="fade-up fade-up-delay-1">
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-crosshairs"></i></div>
+          <h3 class="service-card__title">Our Mission</h3>
+          <p class="service-card__desc">To build AI infrastructure that gives individuals and organizations the intelligence capabilities previously reserved for the world's largest technology companies. We democratize elite AI — making it accessible, applicable, and transformative.</p>
         </div>
-    </section>
-
-    <!-- Core Values -->
-    <section class="core-values">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Core Values</h2>
-                <p class="section-description">The principles that guide everything we do</p>
-            </div>
-            
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <div class="value-content">
-                        <h3 class="value-title">Innovation</h3>
-                        <p class="value-description">We constantly push the boundaries of what's possible with AI technology, always seeking new ways to solve problems and create value.</p>
-                    </div>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <div class="value-content">
-                        <h3 class="value-title">Integrity</h3>
-                        <p class="value-description">We maintain the highest ethical standards in all our business practices and AI development, ensuring transparency and trust.</p>
-                    </div>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="value-content">
-                        <h3 class="value-title">Excellence</h3>
-                        <p class="value-description">We are committed to delivering exceptional quality in every product and service, exceeding expectations and setting industry standards.</p>
-                    </div>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="value-content">
-                        <h3 class="value-title">Empathy</h3>
-                        <p class="value-description">We understand our users' needs and challenges, designing solutions that truly make a positive impact on their lives and work.</p>
-                    </div>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <div class="value-content">
-                        <h3 class="value-title">Accessibility</h3>
-                        <p class="value-description">We believe AI should be accessible to everyone, regardless of technical background or financial resources.</p>
-                    </div>
-                </div>
-                
-                <div class="value-card">
-                    <div class="value-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <div class="value-content">
-                        <h3 class="value-title">Continuous Learning</h3>
-                        <p class="value-description">We embrace continuous learning and improvement, staying ahead of technological advances and evolving with our users' needs.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-card__icon"><i class="fas fa-telescope"></i></div>
+          <h3 class="service-card__title">Our Vision</h3>
+          <p class="service-card__desc">A world where every student learns with a personal AI that understands them. Where every business operates with intelligent agents handling complexity. Where human potential is amplified by AI, not replaced by it. That is the future we are building.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Meet Our Team</h2>
-                <p class="section-description">The brilliant minds behind Elara Tech Labs</p>
-            </div>
-            
-            <div class="team-grid">
-                <div class="team-member founder-member">
-                    <div class="member-avatar">
-                        <div class="avatar-placeholder"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Baljot Singh Chohan</h3>
-                        <p class="member-title">Founder & CEO</p>
-                        <p class="member-bio">At just 18 years old, I am the visionary founder and CEO of Elara Tech Labs. Currently pursuing a Bachelor of Computer Applications (BCA), I am deeply passionate about Artificial Intelligence (AI) and Machine Learning (ML). Alongside my academic journey, I actively engage in AI research and content creation as an AI journalist, sharing insights and knowledge about emerging technologies.</p>
-                        <p class="member-bio">My entrepreneurial journey began with the creation of StudiQ, a flagship AI-driven learning platform designed to provide personalized education and skill enhancement for students and professionals alike. I am dedicated to leveraging technology to automate business processes and redefine digital learning experiences.</p>
-                        <div class="member-highlights">
-                            <h4>Key Highlights:</h4>
-                            <ul>
-                                <li>Spearheading the development of AI-powered products and services across education and business domains</li>
-                                <li>Leading innovation in automation and digital transformation for enterprises</li>
-                                <li>Managing strategic growth, partnerships, and product vision for Elara Tech Labs and StudiQ</li>
-                                <li>Continuously learning and applying new AI and ML techniques to drive impactful real-world solutions</li>
-                            </ul>
-                        </div>
-                        <div class="member-social">
-                            <a href="https://instagram.com/baljotchohan_01" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="https://twitter.com/baljotchohan" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/in/baljot-chohan-866ba6356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member founder-member">
-                    <div class="member-avatar">
-                        <div class="avatar-placeholder"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Mankirat Singh</h3>
-                        <p class="member-title">Co-Founder & Media Head</p>
-                        <p class="member-bio">My close friend, Mankirat Singh, is an engineering student at the University of Manitoba in Winnipeg, Canada. He is an expert videographer and professional video editor, bringing our brand's vision to life through creative visuals and media production. His skills empower our company to manage all visual and content-related operations, ensuring professional presentation and engagement across platforms.</p>
-                        <div class="member-highlights">
-                            <h4>Key Contributions:</h4>
-                            <ul>
-                                <li>Overseeing multimedia content creation and editing for our company</li>
-                                <li>Supporting marketing campaigns through high-quality video storytelling</li>
-                                <li>Enhancing StudiQ and Elara Tech Labs' brand presence with engaging media</li>
-                            </ul>
-                        </div>
-                        <div class="member-social">
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="team-member founder-member">
-                    <div class="member-avatar">
-                        <div class="avatar-placeholder"></div>
-                    </div>
-                    <div class="member-info">
-                        <h3 class="member-name">Damandeep Singh</h3>
-                        <p class="member-title">Chief Financial Officer (CFO)</p>
-                        <p class="member-bio">Meet Damandeep Singh, our Chief Financial Officer at Elara Tech Labs. Currently pursuing AI/ML at Chitkara University, Chandigarh, Damandeep brings a unique blend of financial expertise and technical insight. His passion for AI-driven innovation and strategic financial planning makes him a vital force in driving our vision forward.</p>
-                        <div class="member-highlights">
-                            <h4>Key Responsibilities:</h4>
-                            <ul>
-                                <li>Strategic financial planning and budget management for Elara Tech Labs</li>
-                                <li>Financial analysis and risk assessment for AI-driven projects</li>
-                                <li>Investment planning and resource allocation for company growth</li>
-                                <li>Financial reporting and compliance management</li>
-                                <li>Integration of AI/ML insights into financial decision-making processes</li>
-                            </ul>
-                        </div>
-                        <div class="member-social">
-                            <a href="https://www.instagram.com/x7_daman?igsh=ejhiMHZoZXl3ZzRp" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="https://twitter.com/damandeep018" class="social-link"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="founder-story">
-                <div class="founder-story-content">
-                    <h3>Our Story</h3>
-                    <p>Together, we are a young and dynamic team determined to innovate, create, and revolutionize the AI landscape with passion and persistence. Our combined technical expertise, creative vision, and financial acumen sets the foundation for Elara Tech Labs' mission to deliver world-class solutions for the future.</p>
-                    <p>As young entrepreneurs, we bring fresh perspectives and innovative thinking to the AI industry. From AI development and media production to financial strategy and business growth, our diverse skill sets create a powerful synergy that drives our company forward.</p>
-                    <p>Our journey represents the power of youth, determination, and the belief that age is just a number when it comes to making a meaningful impact in technology. With Damandeep's financial expertise, Mankirat's creative vision, and our shared passion for AI innovation, we're building something truly extraordinary.</p>
-                </div>
-            </div>
+  <!-- VALUES -->
+  <section class="section dot-bg" id="values">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">What We Stand For</div>
+        <h2 class="section-title">Core Values</h2>
+        <p class="section-desc">The principles that guide every line of code we write, every product we ship, and every relationship we build.</p>
+      </div>
+      <div class="values-grid">
+        <div class="value-card fade-up">
+          <div class="value-card__icon"><i class="fas fa-atom"></i></div>
+          <h3 class="value-card__title">Innovation Without Limits</h3>
+          <p class="value-card__desc">We challenge what's possible. Every problem is an invitation to invent something better than what existed before.</p>
         </div>
-    </section>
-
-
-    <!-- Future Vision -->
-    <section class="future-vision">
-        <div class="container">
-            <div class="future-content">
-                <div class="future-text">
-                    <h2 class="future-title">Looking Ahead</h2>
-                    <p class="future-description">As we look to the future, Elara Tech Labs is committed to staying at the forefront of AI innovation. We are actively developing additional projects and services to further expand our AI ecosystem.</p>
-                    
-                    <div class="future-initiatives">
-                        <div class="initiative-item">
-                            <div class="initiative-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div class="initiative-content">
-                                <h4>Advanced Business Automation</h4>
-                                <p>Next-generation AI solutions for enterprise automation and digital transformation</p>
-                            </div>
-                        </div>
-                        
-                        <div class="initiative-item">
-                            <div class="initiative-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="initiative-content">
-                                <h4>Educational Innovation</h4>
-                                <p>Revolutionary tools for personalized learning and career development</p>
-                            </div>
-                        </div>
-                        
-                        <div class="initiative-item">
-                            <div class="initiative-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="initiative-content">
-                                <h4>AI-Powered Solutions</h4>
-                                <p>Comprehensive AI-driven solutions to empower businesses and individuals</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <p class="future-commitment">We are committed to continuously innovating and providing world-class AI products and services to meet the dynamic needs of the modern world. Join us on this journey of transformation and discovery.</p>
-                </div>
-                <div class="future-visual">
-                    <div class="innovation-timeline">
-                        <div class="timeline-item future-item">
-                            <div class="timeline-year">2025</div>
-                            <div class="timeline-content">
-                                <h4>AI Agent Platform</h4>
-                                <p>Launch of advanced AI agent ecosystem</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item future-item">
-                            <div class="timeline-year">2026</div>
-                            <div class="timeline-content">
-                                <h4>Global Expansion</h4>
-                                <p>Expanding to 50+ countries worldwide</p>
-                            </div>
-                        </div>
-                        
-                        <div class="timeline-item future-item">
-                            <div class="timeline-year">2027</div>
-                            <div class="timeline-content">
-                                <h4>Next-Gen StudiQ</h4>
-                                <p>Revolutionary learning platform with AR/VR</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="value-card fade-up fade-up-delay-1">
+          <div class="value-card__icon"><i class="fas fa-shield-halved"></i></div>
+          <h3 class="value-card__title">Integrity in Everything</h3>
+          <p class="value-card__desc">We build with honesty, ship with transparency, and treat every client's trust as our most valuable asset.</p>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Join Our Mission</h2>
-                <p class="cta-description">Be part of the AI revolution. Whether you're looking to transform your business or advance your career, we're here to help.</p>
-                <div class="cta-actions">
-                    <button class="btn btn-primary btn-large" onclick="window.location.href='index.html#contact'">Get Started <i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
+        <div class="value-card fade-up fade-up-delay-2">
+          <div class="value-card__icon"><i class="fas fa-medal"></i></div>
+          <h3 class="value-card__title">Relentless Excellence</h3>
+          <p class="value-card__desc">We don't ship what's good enough. We ship what's exceptional — then immediately ask how to make it better.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-brand">
-                        <div class="logo">
-                            <span class="logo-text">Elara Tech Labs</span>
-                        </div>
-                        <p class="footer-description">AI-powered digital solutions for the modern world.</p>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">SaaS Solutions</a></li>
-                        <li><a href="services.html">AI Automations</a></li>
-                        <li><a href="services.html">AI Agency Services</a></li>
-                        <li><a href="services.html">Custom Software</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Products</h4>
-                    <ul class="footer-links">
-                        <li><a href="products.html">StudiQ Platform</a></li>
-                        <li><a href="products.html">AI Tutor</a></li>
-                        <li><a href="products.html">Career Finder</a></li>
-                        <li><a href="products.html">Study Plans</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title">Connect</h4>
-                    <div class="social-links">
-                        <div class="social-group">
-                            <h5 class="social-group-title">Baljot's Social Media</h5>
-                            <div class="social-group-links">
-                                <a href="https://instagram.com/baljotchohan_01" class="social-link" title="Baljot's Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="https://twitter.com/baljotchohan" class="social-link" title="Baljot's Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                                <a href="https://www.linkedin.com/in/baljot-chohan-866ba6356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" class="social-link" title="Baljot's LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            </div>
-                        </div>
-                        <div class="social-group">
-                            <h5 class="social-group-title">Damandeep's Social Media</h5>
-                            <div class="social-group-links">
-                                <a href="https://www.instagram.com/x7_daman?igsh=ejhiMHZoZXl3ZzRp" class="social-link" title="Damandeep's Instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                                <a href="https://twitter.com/damandeep018" class="social-link" title="Damandeep's Twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                            </div>
-                        </div>
-                        <div class="social-group">
-                            <h5 class="social-group-title">Community</h5>
-                            <div class="social-group-links">
-                                <a href="https://chat.whatsapp.com/H7j3XOc4zQs6nIFS8ok0xi" class="social-link" title="WhatsApp Community"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Elara Tech Labs. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#privacy">Privacy Policy</a>
-                    <a href="#terms">Terms of Service</a>
-                    <a href="#cookies">Cookie Policy</a>
-                </div>
-            </div>
+        <div class="value-card fade-up fade-up-delay-3">
+          <div class="value-card__icon"><i class="fas fa-heart"></i></div>
+          <h3 class="value-card__title">Human Empathy</h3>
+          <p class="value-card__desc">Technology serves people. We design for real humans with real needs — not abstract users in a vacuum.</p>
         </div>
-    </footer>
+        <div class="value-card fade-up fade-up-delay-4">
+          <div class="value-card__icon"><i class="fas fa-unlock"></i></div>
+          <h3 class="value-card__title">Radical Accessibility</h3>
+          <p class="value-card__desc">Elite AI capabilities shouldn't require elite budgets. We build powerful systems that are genuinely accessible.</p>
+        </div>
+        <div class="value-card fade-up fade-up-delay-5">
+          <div class="value-card__icon"><i class="fas fa-infinity"></i></div>
+          <h3 class="value-card__title">Continuous Learning</h3>
+          <p class="value-card__desc">In an industry that reinvents itself every six months, learning is not optional — it's the core of who we are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- TEAM -->
+  <section class="section bg-surface" id="team" style="border-top:1px solid var(--border);">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="tag">The Founders</div>
+        <h2 class="section-title">People Behind the Vision</h2>
+        <p class="section-desc">A small team with large ambitions — builders, thinkers, and visionaries who chose to create rather than wait.</p>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card fade-up">
+          <div class="team-avatar">BC</div>
+          <h3 class="team-card__name">Baljot Singh Chohan</h3>
+          <div class="team-card__role">Founder &amp; CEO</div>
+          <p class="team-card__bio">18-year-old founder with an obsession for AI systems, product architecture, and making technology that genuinely matters. Building Elara Tech Labs to be the AI infrastructure company for the next generation.</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="team-card fade-up fade-up-delay-1">
+          <div class="team-avatar">MS</div>
+          <h3 class="team-card__name">Mankirat Singh</h3>
+          <div class="team-card__role">Co-Founder &amp; Media Head</div>
+          <p class="team-card__bio">Brand storyteller and media strategist who ensures Elara's vision is communicated with clarity and impact. Leads all creative direction, content strategy, and brand identity.</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="team-card fade-up fade-up-delay-2">
+          <div class="team-avatar">DS</div>
+          <h3 class="team-card__name">Damandeep Singh</h3>
+          <div class="team-card__role">Chief Financial Officer</div>
+          <p class="team-card__bio">Financial strategist responsible for Elara's fiscal health, investor relations, and operational efficiency. Ensures the business scales sustainably as ambitions grow.</p>
+          <div class="team-socials">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="fade-up">
+        <div class="tag" style="margin-bottom:20px;">Join the Journey</div>
+        <h2 class="cta-banner__title">
+          Building the Future —<br>
+          <span class="text-gold">Want to Be Part of It?</span>
+        </h2>
+        <p class="cta-banner__desc">Whether you're a potential client, a future team member, or someone who believes in the AI-first future — we want to hear from you.</p>
+        <div class="cta-banner__actions">
+          <a href="index.html#contact" class="btn btn--primary btn--lg">Get in Touch</a>
+          <a href="services.html" class="btn btn--ghost btn--lg">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="nav__logo" style="display:inline-flex;margin-bottom:16px;">
+            <span class="logo-mark">E</span>
+            <span class="logo-word">Elara<span class="logo-accent">Tech</span></span>
+          </a>
+          <p>Building the intelligence layer of tomorrow — AI agents, automation, and intelligent software for the modern enterprise.</p>
+          <div class="footer__social">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <div class="footer__col-title">Company</div>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Team</a></li>
+            <li><a href="about.html#values">Values</a></li>
+            <li><a href="index.html#contact">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Services</div>
+          <ul class="footer__links">
+            <li><a href="services.html">AI Agents</a></li>
+            <li><a href="services.html">Automation</a></li>
+            <li><a href="services.html">SaaS Development</a></li>
+            <li><a href="services.html">AI Consulting</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Products</div>
+          <ul class="footer__links">
+            <li><a href="products.html">Stradike</a></li>
+            <li><a href="https://studio--learnflow-ai-co3xd.us-central1.hosted.app" target="_blank">Launch App</a></li>
+            <li><a href="products.html#features">Features</a></li>
+            <li><a href="products.html#tech">Technology</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2025 Elara Tech Labs Ltd. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
